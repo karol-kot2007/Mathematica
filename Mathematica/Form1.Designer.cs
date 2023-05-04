@@ -34,13 +34,13 @@
             // functionChart1
             // 
             this.functionChart1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.functionChart1.ChartLineXLeft = new System.Drawing.Point(0, 0);
-            this.functionChart1.ChartLineXRight = new System.Drawing.Point(0, 0);
-            this.functionChart1.ChartLineYBottom = new System.Drawing.Point(0, 0);
-            this.functionChart1.ChartLineYTop = new System.Drawing.Point(0, 0);
-            this.functionChart1.Location = new System.Drawing.Point(43, 56);
+            this.functionChart1.ChartLineXLeft = new System.Drawing.Point(10, 400);
+            this.functionChart1.ChartLineXRight = new System.Drawing.Point(500, 400);
+            this.functionChart1.ChartLineYBottom = new System.Drawing.Point(10, 400);
+            this.functionChart1.ChartLineYTop = new System.Drawing.Point(10, 10);
+            this.functionChart1.Location = new System.Drawing.Point(1, 1);
             this.functionChart1.Name = "functionChart1";
-            this.functionChart1.Size = new System.Drawing.Size(742, 393);
+            this.functionChart1.Size = new System.Drawing.Size(982, 674);
             this.functionChart1.TabIndex = 0;
             // 
             // Form1

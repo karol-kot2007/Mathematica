@@ -39,7 +39,8 @@ namespace Mathematica
 
         private void FunctionChart_Paint(object sender, PaintEventArgs e)
         {
-           e.Graphics.DrawLine(Pens.Gray,new Point(0,0),new Point(44,123));
+           e.Graphics.DrawLine(Pens.Gray, ChartLineYTop, ChartLineYBottom);
+            e.Graphics.DrawLine(Pens.Gray, ChartLineXLeft, ChartLineXRight  );
         }
     }
 }
