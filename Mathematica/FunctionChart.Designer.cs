@@ -1,6 +1,6 @@
 ﻿namespace Mathematica
 {
-    partial class funchart
+    partial class FunctionChart
     {
         /// <summary> 
         /// Required designer variable.
@@ -50,14 +50,16 @@
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // funchart
+            // FunctionChart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel1);
-            this.Name = "funchart";
-            this.Size = new System.Drawing.Size(353, 175);
+            this.Name = "FunctionChart";
+            this.Size = new System.Drawing.Size(811, 467);
             this.Load += new System.EventHandler(this.funchart_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.FunctionChart_Paint);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

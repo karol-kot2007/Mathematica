@@ -10,9 +10,14 @@ using System.Windows.Forms;
 
 namespace Mathematica
 {
-    public partial class funchart : UserControl
+    public partial class FunctionChart : UserControl
     {
-        public funchart()
+        public Point ChartLineYTop { get; set; }
+        public Point ChartLineYBottom { get; set; }
+
+        public Point ChartLineXLeft { get; set; }
+        public Point ChartLineXRight { get; set; }
+        public FunctionChart()
         {
             InitializeComponent();
         }
@@ -30,6 +35,11 @@ namespace Mathematica
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void FunctionChart_Paint(object sender, PaintEventArgs e)
+        {
+           e.Graphics.DrawLine(Pens.Gray,new Point(0,0),new Point(44,123));
         }
     }
 }
