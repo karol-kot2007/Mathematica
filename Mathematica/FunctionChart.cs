@@ -17,9 +17,14 @@ namespace Mathematica
 
         public Point ChartLineXLeft { get; set; }
         public Point ChartLineXRight { get; set; }
+
+        internal Line AxisY { get; set; }
+        internal Line AxisX { get; set; }
         public FunctionChart()
         {
             InitializeComponent();
+
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -29,7 +34,8 @@ namespace Mathematica
 
         private void funchart_Load(object sender, EventArgs e)
         {
-
+            AxisX = new Line(ChartLineXLeft, ChartLineXRight);
+            AxisY = new Line(ChartLineYTop, ChartLineYBottom);
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -39,8 +45,9 @@ namespace Mathematica
 
         private void FunctionChart_Paint(object sender, PaintEventArgs e)
         {
-           e.Graphics.DrawLine(Pens.Gray, ChartLineYTop, ChartLineYBottom);
-            e.Graphics.DrawLine(Pens.Gray, ChartLineXLeft, ChartLineXRight  );
+
+            e.Graphics.DrawLine(Pens.Gray, AxisY.Start, AxisY.End);
+            e.Graphics.DrawLine(Pens.Gray, AxisX.Start, AxisX.End);
         }
     }
 }
