@@ -22,6 +22,7 @@ namespace Mathematica
         internal Line AxisX { get; set; }
 
         internal Arrow ArrowY { get; set; }
+        Line[] chartAxisLines;
 
 
 
@@ -49,8 +50,15 @@ namespace Mathematica
             ArrowY.Line1 = new Line(pt, ChartLineYTop);
             pt.X=pt.X + 12;
             ArrowY.Line2 = new Line(ChartLineYTop, pt);
+            chartAxisLines = new Line[4];
+            chartAxisLines[0] = AxisX;
+            chartAxisLines[1] = AxisY;
+            chartAxisLines[2] = ArrowY.Line1;
+            chartAxisLines[3] = ArrowY.Line2;
+            
         }
-
+        
+        
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
@@ -58,11 +66,14 @@ namespace Mathematica
 
         private void FunctionChart_Paint(object sender, PaintEventArgs e)
         {
-
-            e.Graphics.DrawLine(Pens.Gray, AxisY.Start, AxisY.End);
-            e.Graphics.DrawLine(Pens.Gray, AxisX.Start, AxisX.End);
-            e.Graphics.DrawLine(Pens.Gray, ArrowY.Line1.Start, ArrowY.Line1.End);
-            e.Graphics.DrawLine(Pens.Gray, ArrowY.Line2.Start, ArrowY.Line2.End);
+            foreach(var line in chartAxisLines)
+            {
+                e.Graphics.DrawLine(Pens.Gray, line.Start, line.End);
+            }
+            //e.Graphics.DrawLine(Pens.Gray, AxisY.Start, AxisY.End);
+            //e.Graphics.DrawLine(Pens.Gray, AxisX.Start, AxisX.End);
+            //e.Graphics.DrawLine(Pens.Gray, ArrowY.Line1.Start, ArrowY.Line1.End);
+            //e.Graphics.DrawLine(Pens.Gray, ArrowY.Line2.Start, ArrowY.Line2.End);
         }
     }
 }
