@@ -20,6 +20,11 @@ namespace Mathematica
 
         internal Line AxisY { get; set; }
         internal Line AxisX { get; set; }
+
+        internal Arrow ArrowY { get; set; }
+
+
+
         public FunctionChart()
         {
             InitializeComponent();
@@ -36,6 +41,14 @@ namespace Mathematica
         {
             AxisX = new Line(ChartLineXLeft, ChartLineXRight);
             AxisY = new Line(ChartLineYTop, ChartLineYBottom);
+            ArrowY = new Arrow();
+
+            var pt = ChartLineYTop;
+            pt.X = pt.X - 6;
+            pt.Y = pt.Y +10;
+            ArrowY.Line1 = new Line(pt, ChartLineYTop);
+            pt.X=pt.X + 12;
+            ArrowY.Line2 = new Line(ChartLineYTop, pt);
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -48,6 +61,8 @@ namespace Mathematica
 
             e.Graphics.DrawLine(Pens.Gray, AxisY.Start, AxisY.End);
             e.Graphics.DrawLine(Pens.Gray, AxisX.Start, AxisX.End);
+            e.Graphics.DrawLine(Pens.Gray, ArrowY.Line1.Start, ArrowY.Line1.End);
+            e.Graphics.DrawLine(Pens.Gray, ArrowY.Line2.Start, ArrowY.Line2.End);
         }
     }
 }
