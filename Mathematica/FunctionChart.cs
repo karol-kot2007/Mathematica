@@ -22,7 +22,7 @@ namespace Mathematica
         internal Line AxisX { get; set; }
 
         internal Arrow ArrowY { get; set; }
-        Line[] chartAxisLines;
+       List<Line>  chartAxisLines;
 
 
 
@@ -50,11 +50,12 @@ namespace Mathematica
             ArrowY.Line1 = new Line(pt, ChartLineYTop);
             pt.X=pt.X + 12;
             ArrowY.Line2 = new Line(ChartLineYTop, pt);
-            chartAxisLines = new Line[4];
-            chartAxisLines[0] = AxisX;
-            chartAxisLines[1] = AxisY;
-            chartAxisLines[2] = ArrowY.Line1;
-            chartAxisLines[3] = ArrowY.Line2;
+           
+            chartAxisLines = new List<Line>();
+            chartAxisLines.Add(AxisX);
+            chartAxisLines.Add(AxisY);
+            chartAxisLines.Add(ArrowY.Line1);
+            chartAxisLines.Add(ArrowY.Line2);
             
         }
         
