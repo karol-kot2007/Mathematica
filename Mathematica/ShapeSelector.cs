@@ -13,6 +13,13 @@ namespace Mathematica
     public partial class ShapeSelector : UserControl
     {
         public event EventHandler DrawClicked;
+        public string ShapeKind { 
+            get; 
+            set; 
+        }
+        
+        public PointF Point1 { get; set; }
+        public PointF Point2 { get; set; }
         public ShapeSelector()
         {
             InitializeComponent();
@@ -20,6 +27,8 @@ namespace Mathematica
 
         private void DrawClick(object sender, EventArgs e)
         {
+            Point1 = new PointF(float.Parse(Point1XTxt.Text), float.Parse( Point1YTxt.Text));
+            Point2 = new PointF(float.Parse(Point2XTxt.Text),float.Parse(Point2YTxt.Text));
             if (DrawClicked != null)
                 DrawClicked(this, EventArgs.Empty);
         }
@@ -27,6 +36,11 @@ namespace Mathematica
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ShapeKind_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ShapeKind=ShapeKindCb.Text;
         }
     }
 }

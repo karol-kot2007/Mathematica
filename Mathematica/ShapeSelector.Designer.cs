@@ -28,26 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ShapeKindCb = new System.Windows.Forms.ComboBox();
             this.drawBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.xq = new System.Windows.Forms.Label();
-            this.Yto = new System.Windows.Forms.TextBox();
-            this.Xto = new System.Windows.Forms.TextBox();
+            this.Point2YTxt = new System.Windows.Forms.TextBox();
+            this.Point2XTxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxYfrom = new System.Windows.Forms.TextBox();
+            this.Point1YTxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxXFrom = new System.Windows.Forms.TextBox();
+            this.Point1XTxt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // ShapeKindCb
             // 
-            this.comboBox1.AccessibleName = "ShapeType ";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(4, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 0;
+            this.ShapeKindCb.AccessibleName = "ShapeType ";
+            this.ShapeKindCb.FormattingEnabled = true;
+            this.ShapeKindCb.Items.AddRange(new object[] {
+            "lines",
+            "circle"});
+            this.ShapeKindCb.Location = new System.Drawing.Point(4, 3);
+            this.ShapeKindCb.Name = "ShapeKindCb";
+            this.ShapeKindCb.Size = new System.Drawing.Size(121, 23);
+            this.ShapeKindCb.TabIndex = 0;
+            this.ShapeKindCb.SelectedIndexChanged += new System.EventHandler(this.ShapeKind_SelectedIndexChanged);
             // 
             // drawBtn
             // 
@@ -77,21 +81,21 @@
             this.xq.TabIndex = 15;
             this.xq.Text = "x to";
             // 
-            // Yto
+            // Point2YTxt
             // 
-            this.Yto.Location = new System.Drawing.Point(233, 95);
-            this.Yto.Name = "Yto";
-            this.Yto.Size = new System.Drawing.Size(100, 23);
-            this.Yto.TabIndex = 14;
-            this.Yto.Text = "44";
+            this.Point2YTxt.Location = new System.Drawing.Point(233, 95);
+            this.Point2YTxt.Name = "Point2YTxt";
+            this.Point2YTxt.Size = new System.Drawing.Size(100, 23);
+            this.Point2YTxt.TabIndex = 14;
+            this.Point2YTxt.Text = "44";
             // 
-            // Xto
+            // Point2XTxt
             // 
-            this.Xto.Location = new System.Drawing.Point(58, 87);
-            this.Xto.Name = "Xto";
-            this.Xto.Size = new System.Drawing.Size(100, 23);
-            this.Xto.TabIndex = 13;
-            this.Xto.Text = "242242";
+            this.Point2XTxt.Location = new System.Drawing.Point(58, 87);
+            this.Point2XTxt.Name = "Point2XTxt";
+            this.Point2XTxt.Size = new System.Drawing.Size(100, 23);
+            this.Point2XTxt.TabIndex = 13;
+            this.Point2XTxt.Text = "242242";
             // 
             // label2
             // 
@@ -103,13 +107,13 @@
             this.label2.Text = "y from";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBoxYfrom
+            // Point1YTxt
             // 
-            this.textBoxYfrom.Location = new System.Drawing.Point(233, 47);
-            this.textBoxYfrom.Name = "textBoxYfrom";
-            this.textBoxYfrom.Size = new System.Drawing.Size(100, 23);
-            this.textBoxYfrom.TabIndex = 11;
-            this.textBoxYfrom.Text = "2";
+            this.Point1YTxt.Location = new System.Drawing.Point(233, 47);
+            this.Point1YTxt.Name = "Point1YTxt";
+            this.Point1YTxt.Size = new System.Drawing.Size(100, 23);
+            this.Point1YTxt.TabIndex = 11;
+            this.Point1YTxt.Text = "2";
             // 
             // label1
             // 
@@ -120,13 +124,13 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "x from";
             // 
-            // textBoxXFrom
+            // Point1XTxt
             // 
-            this.textBoxXFrom.Location = new System.Drawing.Point(58, 47);
-            this.textBoxXFrom.Name = "textBoxXFrom";
-            this.textBoxXFrom.Size = new System.Drawing.Size(100, 23);
-            this.textBoxXFrom.TabIndex = 9;
-            this.textBoxXFrom.Text = "2";
+            this.Point1XTxt.Location = new System.Drawing.Point(58, 47);
+            this.Point1XTxt.Name = "Point1XTxt";
+            this.Point1XTxt.Size = new System.Drawing.Size(100, 23);
+            this.Point1XTxt.TabIndex = 9;
+            this.Point1XTxt.Text = "2";
             // 
             // ShapeSelector
             // 
@@ -134,14 +138,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label4);
             this.Controls.Add(this.xq);
-            this.Controls.Add(this.Yto);
-            this.Controls.Add(this.Xto);
+            this.Controls.Add(this.Point2YTxt);
+            this.Controls.Add(this.Point2XTxt);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxYfrom);
+            this.Controls.Add(this.Point1YTxt);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxXFrom);
+            this.Controls.Add(this.Point1XTxt);
             this.Controls.Add(this.drawBtn);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.ShapeKindCb);
             this.Name = "ShapeSelector";
             this.Size = new System.Drawing.Size(335, 362);
             this.ResumeLayout(false);
@@ -151,15 +155,15 @@
 
         #endregion
 
-        private ComboBox comboBox1;
+        private ComboBox ShapeKindCb;
         private Button drawBtn;
         private Label label4;
         private Label xq;
-        private TextBox Yto;
-        private TextBox Xto;
+        private TextBox Point2YTxt;
+        private TextBox Point2XTxt;
         private Label label2;
-        private TextBox textBoxYfrom;
+        private TextBox Point1YTxt;
         private Label label1;
-        private TextBox textBoxXFrom;
+        private TextBox Point1XTxt;
     }
 }

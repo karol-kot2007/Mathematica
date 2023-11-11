@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.shapeSelector1 = new Mathematica.ShapeSelector();
+            this.shapeSelector = new Mathematica.ShapeSelector();
             this.SuspendLayout();
             // 
-            // shapeSelector1
+            // shapeSelector
             // 
-            this.shapeSelector1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.shapeSelector1.Location = new System.Drawing.Point(465, 0);
-            this.shapeSelector1.Name = "shapeSelector1";
-            this.shapeSelector1.Size = new System.Drawing.Size(335, 450);
-            this.shapeSelector1.TabIndex = 9;
-            this.shapeSelector1.Load += new System.EventHandler(this.shapeSelector1_Load);
+            this.shapeSelector.Dock = System.Windows.Forms.DockStyle.Right;
+            this.shapeSelector.Location = new System.Drawing.Point(465, 0);
+            this.shapeSelector.Name = "shapeSelector";
+            this.shapeSelector.Size = new System.Drawing.Size(335, 450);
+            this.shapeSelector.TabIndex = 9;
+            this.shapeSelector.Load += new System.EventHandler(this.shapeSelector1_Load);
             // 
             // Shapes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.shapeSelector1);
+            this.Controls.Add(this.shapeSelector);
             this.Name = "Shapes";
             this.Text = "Shapes";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Shapes_Paint);
@@ -54,6 +54,6 @@
         }
 
         #endregion
-        private ShapeSelector shapeSelector1;
+        private ShapeSelector shapeSelector;
     }
 }

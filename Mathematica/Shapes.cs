@@ -13,9 +13,16 @@ namespace Mathematica
 {
     public partial class Shapes : Form
     {
+        string shapeToDraw;
         public Shapes()
         {
             InitializeComponent();
+            shapeSelector.DrawClicked += ShapeSelector_DrawClicked;
+        }
+
+        private void ShapeSelector_DrawClicked(object? sender, EventArgs e)
+        {
+            Invalidate();
         }
 
         public void DrawLinePointF(PaintEventArgs e)
@@ -23,21 +30,27 @@ namespace Mathematica
 
             // Create pen.
             Pen blackPen = new Pen(Color.Black, 3);
-
+            //shapeSelector.Point1
             // Create points that define line.
             //PointF point1 = new PointF(float.Parse(textBoxXFrom.Text), 100.0F);
             //PointF point2 = new PointF(float.Parse(textBoxYfrom.Text), 100.0F);
             //PointF point3 = new PointF(float.Parse(Xto.Text), 10.0F);
             //PointF point4 = new PointF(float.Parse(Yto.Text), 10.0F);
             // Draw line to screen.
-           // e.Graphics.DrawLine(blackPen, point1, point2);
+          e.Graphics.DrawLine(blackPen, shapeSelector.Point1, shapeSelector.Point2);
         }
 
         private void Shapes_Paint(object sender, PaintEventArgs e)
         {
-            DrawLinePointF(e);
-            DrawCircle1( e);
-            DrawCircle2(e);
+            if (shapeSelector.ShapeKind == "lines")
+            {
+                DrawLinePointF(e);
+            }
+            else if (shapeSelector.ShapeKind == "circle")
+            {                  
+                DrawCircle1(e);
+                DrawCircle2(e);
+            }
         }
         private void DrawCircle1(PaintEventArgs e)
         {
