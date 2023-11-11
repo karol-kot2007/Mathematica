@@ -30,14 +30,16 @@
         {
             this.ShapeKindCb = new System.Windows.Forms.ComboBox();
             this.drawBtn = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.xq = new System.Windows.Forms.Label();
+            this.labelYT = new System.Windows.Forms.Label();
+            this.labelXT = new System.Windows.Forms.Label();
             this.Point2YTxt = new System.Windows.Forms.TextBox();
             this.Point2XTxt = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelYF = new System.Windows.Forms.Label();
             this.Point1YTxt = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelXF = new System.Windows.Forms.Label();
             this.Point1XTxt = new System.Windows.Forms.TextBox();
+            this.Radius = new System.Windows.Forms.Label();
+            this.RadiusTxt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ShapeKindCb
@@ -55,7 +57,7 @@
             // 
             // drawBtn
             // 
-            this.drawBtn.Location = new System.Drawing.Point(4, 145);
+            this.drawBtn.Location = new System.Drawing.Point(3, 230);
             this.drawBtn.Name = "drawBtn";
             this.drawBtn.Size = new System.Drawing.Size(75, 23);
             this.drawBtn.TabIndex = 1;
@@ -63,23 +65,23 @@
             this.drawBtn.UseVisualStyleBackColor = true;
             this.drawBtn.Click += new System.EventHandler(this.DrawClick);
             // 
-            // label4
+            // labelYT
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(200, 95);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 15);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "y to";
+            this.labelYT.AutoSize = true;
+            this.labelYT.Location = new System.Drawing.Point(200, 95);
+            this.labelYT.Name = "labelYT";
+            this.labelYT.Size = new System.Drawing.Size(27, 15);
+            this.labelYT.TabIndex = 16;
+            this.labelYT.Text = "y to";
             // 
-            // xq
+            // labelXT
             // 
-            this.xq.AutoSize = true;
-            this.xq.Location = new System.Drawing.Point(3, 95);
-            this.xq.Name = "xq";
-            this.xq.Size = new System.Drawing.Size(27, 15);
-            this.xq.TabIndex = 15;
-            this.xq.Text = "x to";
+            this.labelXT.AutoSize = true;
+            this.labelXT.Location = new System.Drawing.Point(3, 95);
+            this.labelXT.Name = "labelXT";
+            this.labelXT.Size = new System.Drawing.Size(27, 15);
+            this.labelXT.TabIndex = 15;
+            this.labelXT.Text = "x to";
             // 
             // Point2YTxt
             // 
@@ -97,15 +99,15 @@
             this.Point2XTxt.TabIndex = 13;
             this.Point2XTxt.Text = "242242";
             // 
-            // label2
+            // labelYF
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(185, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 15);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "y from";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.labelYF.AutoSize = true;
+            this.labelYF.Location = new System.Drawing.Point(185, 50);
+            this.labelYF.Name = "labelYF";
+            this.labelYF.Size = new System.Drawing.Size(42, 15);
+            this.labelYF.TabIndex = 12;
+            this.labelYF.Text = "y from";
+            this.labelYF.Click += new System.EventHandler(this.label2_Click);
             // 
             // Point1YTxt
             // 
@@ -115,14 +117,14 @@
             this.Point1YTxt.TabIndex = 11;
             this.Point1YTxt.Text = "2";
             // 
-            // label1
+            // labelXF
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 15);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "x from";
+            this.labelXF.AutoSize = true;
+            this.labelXF.Location = new System.Drawing.Point(3, 47);
+            this.labelXF.Name = "labelXF";
+            this.labelXF.Size = new System.Drawing.Size(42, 15);
+            this.labelXF.TabIndex = 10;
+            this.labelXF.Text = "x from";
             // 
             // Point1XTxt
             // 
@@ -132,17 +134,36 @@
             this.Point1XTxt.TabIndex = 9;
             this.Point1XTxt.Text = "2";
             // 
+            // Radius
+            // 
+            this.Radius.AutoSize = true;
+            this.Radius.Location = new System.Drawing.Point(3, 142);
+            this.Radius.Name = "Radius";
+            this.Radius.Size = new System.Drawing.Size(39, 15);
+            this.Radius.TabIndex = 17;
+            this.Radius.Text = "radius";
+            this.Radius.Click += new System.EventHandler(this.Radius_Click);
+            // 
+            // RadiusTxt
+            // 
+            this.RadiusTxt.Location = new System.Drawing.Point(58, 142);
+            this.RadiusTxt.Name = "RadiusTxt";
+            this.RadiusTxt.Size = new System.Drawing.Size(100, 23);
+            this.RadiusTxt.TabIndex = 18;
+            // 
             // ShapeSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.xq);
+            this.Controls.Add(this.RadiusTxt);
+            this.Controls.Add(this.Radius);
+            this.Controls.Add(this.labelYT);
+            this.Controls.Add(this.labelXT);
             this.Controls.Add(this.Point2YTxt);
             this.Controls.Add(this.Point2XTxt);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelYF);
             this.Controls.Add(this.Point1YTxt);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelXF);
             this.Controls.Add(this.Point1XTxt);
             this.Controls.Add(this.drawBtn);
             this.Controls.Add(this.ShapeKindCb);
@@ -157,13 +178,15 @@
 
         private ComboBox ShapeKindCb;
         private Button drawBtn;
-        private Label label4;
-        private Label xq;
+        private Label labelYT;
+        private Label labelXT;
         private TextBox Point2YTxt;
         private TextBox Point2XTxt;
-        private Label label2;
+        private Label labelYF;
         private TextBox Point1YTxt;
-        private Label label1;
+        private Label labelXF;
         private TextBox Point1XTxt;
+        private Label Radius;
+        private TextBox RadiusTxt;
     }
 }
