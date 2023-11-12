@@ -13,11 +13,39 @@ namespace Mathematica
 {
     public partial class Shapes : Form
     {
+        Pen pen = new Pen(Color.Red, 3);
         string shapeToDraw;
         public Shapes()
         {
             InitializeComponent();
             shapeSelector.DrawClicked += ShapeSelector_DrawClicked;
+            shapeSelector.ShapeComboChanged += ShapeSelector_ShapeComboChanged;
+            shapeSelector.ColorChanged += ShapeSelector_ColorChanged;
+        }
+
+        private void ShapeSelector_ColorChanged(object? sender, EventArgs e)
+        {
+            ComboBox color = (ComboBox)sender;
+            if(color.Text=="Blue")
+            {
+                pen.Color = Color.Blue;
+                Invalidate();
+            }
+            else if (color.Text == "Red")
+            {
+                pen.Color = Color.Red;
+                Invalidate();
+            }
+            else if (color.Text == "Green")
+            {
+                pen.Color = Color.Green;
+                Invalidate();
+            }
+        }
+
+        private void ShapeSelector_ShapeComboChanged(object? sender, EventArgs e)
+        {
+            Invalidate();
         }
 
         private void ShapeSelector_DrawClicked(object? sender, EventArgs e)
@@ -29,7 +57,7 @@ namespace Mathematica
         {
 
             // Create pen.
-            Pen blackPen = new Pen(Color.Black, 3);
+           
             //shapeSelector.Point1
             // Create points that define line.
             //PointF point1 = new PointF(float.Parse(textBoxXFrom.Text), 100.0F);
@@ -37,7 +65,7 @@ namespace Mathematica
             //PointF point3 = new PointF(float.Parse(Xto.Text), 10.0F);
             //PointF point4 = new PointF(float.Parse(Yto.Text), 10.0F);
             // Draw line to screen.
-          e.Graphics.DrawLine(blackPen, shapeSelector.Point1, shapeSelector.Point2);
+          e.Graphics.DrawLine(pen, shapeSelector.Point1, shapeSelector.Point2);
         }
 
         private void Shapes_Paint(object sender, PaintEventArgs e)
@@ -51,17 +79,25 @@ namespace Mathematica
                 DrawCircle1(e);
                 DrawCircle2(e);
             }
+
+            else if (shapeSelector.ShapeKind == "triangle")
+            {
+                
+                e.Graphics.DrawLine(pen, shapeSelector.Point1, shapeSelector.Point2);
+                e.Graphics.DrawLine(pen, shapeSelector.Point2, shapeSelector.Point3);
+                e.Graphics.DrawLine(pen, shapeSelector.Point3, shapeSelector.Point1);
+            }
         }
         private void DrawCircle1(PaintEventArgs e)
         {
             // Create pen.
-            Pen blackPen = new Pen(Color.Black, 3);
+          
 
             // Create rectangle for ellipse.
             RectangleF rect = new RectangleF(100.0F, 0.0F, 100.0F, 100.0F);
 
             // Draw ellipse to screen.
-            e.Graphics.DrawEllipse(blackPen, rect);
+            e.Graphics.DrawEllipse(pen, rect);
 
         }
         private void DrawCircle2(PaintEventArgs e)
@@ -77,9 +113,24 @@ namespace Mathematica
                 point = PointF.Add(point, new Size(100,100));
                 points.Add(point);
             }
-            e.Graphics.DrawLines(Pens.Red, points.ToArray());
+            e.Graphics.DrawLines(pen, points.ToArray());
         }
 
+        private void DrawCircle3(PaintEventArgs e)
+        {
+            List<PointF> points = new List<PointF>();
+            //  points.Add(new PointF(100.0F, 100.0F));
+            // points.Add(new PointF(100.0F, 101.0F));
+            for (float angRad = 0; angRad < 2 * Math.PI; angRad += 0.01f)
+            {
+                //float angRad = MathF.Cos((float)Math.PI * angDegreess / 180.0F);
+
+                PointF point = new PointF(MathF.Sin(angRad) * 50, MathF.Cos(angRad) * 50);
+                point = PointF.Add(point, new Size(100, 100));
+                points.Add(point);
+            }
+            e.Graphics.DrawLines(pen, points.ToArray());
+        }
         private void buttonRedraw_Click(object sender, EventArgs e)
         {
             Invalidate();

@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Shapes));
             this.shapeSelector = new Mathematica.ShapeSelector();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // shapeSelector
@@ -36,24 +38,40 @@
             this.shapeSelector.Dock = System.Windows.Forms.DockStyle.Right;
             this.shapeSelector.Location = new System.Drawing.Point(465, 0);
             this.shapeSelector.Name = "shapeSelector";
+            this.shapeSelector.Point1 = ((System.Drawing.PointF)(resources.GetObject("shapeSelector.Point1")));
+            this.shapeSelector.Point2 = ((System.Drawing.PointF)(resources.GetObject("shapeSelector.Point2")));
+            this.shapeSelector.Point3 = ((System.Drawing.PointF)(resources.GetObject("shapeSelector.Point3")));
+            this.shapeSelector.ShapeKind = null;
             this.shapeSelector.Size = new System.Drawing.Size(335, 450);
             this.shapeSelector.TabIndex = 9;
             this.shapeSelector.Load += new System.EventHandler(this.shapeSelector1_Load);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(421, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 15);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "shape";
             // 
             // Shapes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.shapeSelector);
             this.Name = "Shapes";
             this.Text = "Shapes";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Shapes_Paint);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private ShapeSelector shapeSelector;
+        private Label label2;
     }
 }
