@@ -186,7 +186,7 @@
             this.Point3XTxt.Name = "Point3XTxt";
             this.Point3XTxt.Size = new System.Drawing.Size(41, 23);
             this.Point3XTxt.TabIndex = 24;
-            this.Point3XTxt.Text = "50";
+            this.Point3XTxt.Text = "2";
             // 
             // Point3YTxt
             // 

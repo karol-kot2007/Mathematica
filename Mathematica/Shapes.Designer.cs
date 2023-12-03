@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Shapes));
             this.shapeSelector = new Mathematica.ShapeSelector();
-            this.shapeControl = new Mathematica.ShapeControl();
+            this.shapeControl1 = new Mathematica.ShapeControl();
             this.SuspendLayout();
             // 
             // shapeSelector
@@ -48,18 +48,18 @@
             // 
             // shapeControl1
             // 
-            this.shapeControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.shapeControl.Location = new System.Drawing.Point(2, 0);
-            this.shapeControl.Name = "shapeControl1";
-            this.shapeControl.Size = new System.Drawing.Size(398, 426);
-            this.shapeControl.TabIndex = 13;
+            this.shapeControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.shapeControl1.Location = new System.Drawing.Point(2, 0);
+            this.shapeControl1.Name = "shapeControl1";
+            this.shapeControl1.Size = new System.Drawing.Size(398, 426);
+            this.shapeControl1.TabIndex = 13;
             // 
             // Shapes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.shapeControl);
+            this.Controls.Add(this.shapeControl1);
             this.Controls.Add(this.shapeSelector);
             this.Name = "Shapes";
             this.Text = "Shapes";
@@ -70,6 +70,6 @@
 
         #endregion
         private ShapeSelector shapeSelector;
-        private ShapeControl shapeControl;
+        private ShapeControl shapeControl1;
     }
 }
