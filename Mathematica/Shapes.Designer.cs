@@ -35,30 +35,34 @@
             // 
             // shapeSelector
             // 
+            this.shapeSelector.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.shapeSelector.Dock = System.Windows.Forms.DockStyle.Right;
-            this.shapeSelector.Location = new System.Drawing.Point(465, 0);
+            this.shapeSelector.Location = new System.Drawing.Point(572, 0);
             this.shapeSelector.Name = "shapeSelector";
             this.shapeSelector.Point1 = ((System.Drawing.PointF)(resources.GetObject("shapeSelector.Point1")));
             this.shapeSelector.Point2 = ((System.Drawing.PointF)(resources.GetObject("shapeSelector.Point2")));
             this.shapeSelector.Point3 = ((System.Drawing.PointF)(resources.GetObject("shapeSelector.Point3")));
             this.shapeSelector.ShapeKind = null;
-            this.shapeSelector.Size = new System.Drawing.Size(335, 450);
+            this.shapeSelector.Size = new System.Drawing.Size(335, 662);
             this.shapeSelector.TabIndex = 9;
             this.shapeSelector.Load += new System.EventHandler(this.shapeSelector1_Load);
             // 
             // shapeControl1
             // 
+            this.shapeControl1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.shapeControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.shapeControl1.Location = new System.Drawing.Point(2, 0);
+            this.shapeControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.shapeControl1.Location = new System.Drawing.Point(0, 0);
             this.shapeControl1.Name = "shapeControl1";
-            this.shapeControl1.Size = new System.Drawing.Size(398, 426);
+            this.shapeControl1.ShapeSelector = null;
+            this.shapeControl1.Size = new System.Drawing.Size(572, 662);
             this.shapeControl1.TabIndex = 13;
             // 
             // Shapes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(907, 662);
             this.Controls.Add(this.shapeControl1);
             this.Controls.Add(this.shapeSelector);
             this.Name = "Shapes";
