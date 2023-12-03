@@ -28,15 +28,22 @@ namespace Mathematica
         public ShapeSelector()
         {
             InitializeComponent();
+
+           
         }
 
         private void DrawClick(object sender, EventArgs e)
         {
-            Point1 = new PointF(float.Parse(Point1XTxt.Text), float.Parse( Point1YTxt.Text));
-            Point2 = new PointF(float.Parse(Point2XTxt.Text),float.Parse(Point2YTxt.Text));
-            Point3 = new PointF(float.Parse(Point3XTxt.Text), float.Parse(Point3YTxt.Text));
+            ViewToModel();
             if (DrawClicked != null)
                 DrawClicked(this, EventArgs.Empty);
+        }
+
+        private void ViewToModel()
+        {
+            Point1 = new PointF(float.Parse(Point1XTxt.Text), float.Parse(Point1YTxt.Text));
+            Point2 = new PointF(float.Parse(Point2XTxt.Text), float.Parse(Point2YTxt.Text));
+            Point3 = new PointF(float.Parse(Point3XTxt.Text), float.Parse(Point3YTxt.Text));
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -133,10 +140,10 @@ namespace Mathematica
 
         private void ShapeSelector_Load(object sender, EventArgs e)
         {
-
+            ViewToModel();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ColorCb_SelectedIndexChanged(object sender, EventArgs e)
         {
             ColorChanged(ColorCb, EventArgs.Empty);
         }

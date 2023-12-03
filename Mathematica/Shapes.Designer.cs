@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Shapes));
             this.shapeSelector = new Mathematica.ShapeSelector();
-            this.label2 = new System.Windows.Forms.Label();
+            this.shapeControl = new Mathematica.ShapeControl();
             this.SuspendLayout();
             // 
             // shapeSelector
@@ -46,32 +46,30 @@
             this.shapeSelector.TabIndex = 9;
             this.shapeSelector.Load += new System.EventHandler(this.shapeSelector1_Load);
             // 
-            // label2
+            // shapeControl1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(421, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 15);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "shape";
+            this.shapeControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.shapeControl.Location = new System.Drawing.Point(2, 0);
+            this.shapeControl.Name = "shapeControl1";
+            this.shapeControl.Size = new System.Drawing.Size(398, 426);
+            this.shapeControl.TabIndex = 13;
             // 
             // Shapes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.shapeControl);
             this.Controls.Add(this.shapeSelector);
             this.Name = "Shapes";
             this.Text = "Shapes";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Shapes_Paint);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private ShapeSelector shapeSelector;
-        private Label label2;
+        private ShapeControl shapeControl;
     }
 }

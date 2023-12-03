@@ -54,12 +54,13 @@
             // ShapeKindCb
             // 
             this.ShapeKindCb.AccessibleName = "ShapeType ";
+            this.ShapeKindCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ShapeKindCb.FormattingEnabled = true;
             this.ShapeKindCb.Items.AddRange(new object[] {
             "lines",
             "circle",
             "triangle"});
-            this.ShapeKindCb.Location = new System.Drawing.Point(4, 3);
+            this.ShapeKindCb.Location = new System.Drawing.Point(80, 0);
             this.ShapeKindCb.Name = "ShapeKindCb";
             this.ShapeKindCb.Size = new System.Drawing.Size(121, 23);
             this.ShapeKindCb.TabIndex = 0;
@@ -242,7 +243,7 @@
             this.ColorCb.Name = "ColorCb";
             this.ColorCb.Size = new System.Drawing.Size(74, 23);
             this.ColorCb.TabIndex = 32;
-            this.ColorCb.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.ColorCb.SelectedIndexChanged += new System.EventHandler(this.ColorCb_SelectedIndexChanged);
             // 
             // ShapeSelector
             // 

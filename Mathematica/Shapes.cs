@@ -21,6 +21,8 @@ namespace Mathematica
             shapeSelector.DrawClicked += ShapeSelector_DrawClicked;
             shapeSelector.ShapeComboChanged += ShapeSelector_ShapeComboChanged;
             shapeSelector.ColorChanged += ShapeSelector_ColorChanged;
+
+            shapeControl.ShapeSelector = shapeSelector;
         }
 
         private void ShapeSelector_ColorChanged(object? sender, EventArgs e)
@@ -29,64 +31,45 @@ namespace Mathematica
             if(color.Text=="Blue")
             {
                 pen.Color = Color.Blue;
-                Invalidate();
+                Redraw();
             }
             else if (color.Text == "Red")
             {
                 pen.Color = Color.Red;
-                Invalidate();
+                Redraw();
             }
             else if (color.Text == "Green")
             {
                 pen.Color = Color.Green;
-                Invalidate();
+                Redraw();
             }
+        }
+
+        void Redraw()
+        {
+            shapeControl.Invalidate();
+            shapeControl.Update();
+
+            //var size = shapeControl1.Size;
+            //size.Width += 100;
+            //shapeControl1.Size = size;
         }
 
         private void ShapeSelector_ShapeComboChanged(object? sender, EventArgs e)
         {
-            Invalidate();
+            Redraw();
         }
 
         private void ShapeSelector_DrawClicked(object? sender, EventArgs e)
         {
-            Invalidate();
+            Redraw();
         }
 
-        public void DrawLinePointF(PaintEventArgs e)
-        {
-
-            // Create pen.
-           
-            //shapeSelector.Point1
-            // Create points that define line.
-            //PointF point1 = new PointF(float.Parse(textBoxXFrom.Text), 100.0F);
-            //PointF point2 = new PointF(float.Parse(textBoxYfrom.Text), 100.0F);
-            //PointF point3 = new PointF(float.Parse(Xto.Text), 10.0F);
-            //PointF point4 = new PointF(float.Parse(Yto.Text), 10.0F);
-            // Draw line to screen.
-          e.Graphics.DrawLine(pen, shapeSelector.Point1, shapeSelector.Point2);
-        }
+       
 
         private void Shapes_Paint(object sender, PaintEventArgs e)
         {
-            if (shapeSelector.ShapeKind == "lines")
-            {
-                DrawLinePointF(e);
-            }
-            else if (shapeSelector.ShapeKind == "circle")
-            {                  
-                DrawCircle1(e);
-                DrawCircle2(e);
-            }
-
-            else if (shapeSelector.ShapeKind == "triangle")
-            {
-                
-                e.Graphics.DrawLine(pen, shapeSelector.Point1, shapeSelector.Point2);
-                e.Graphics.DrawLine(pen, shapeSelector.Point2, shapeSelector.Point3);
-                e.Graphics.DrawLine(pen, shapeSelector.Point3, shapeSelector.Point1);
-            }
+           
         }
         private void DrawCircle1(PaintEventArgs e)
         {
@@ -131,10 +114,12 @@ namespace Mathematica
             }
             e.Graphics.DrawLines(pen, points.ToArray());
         }
-        private void buttonRedraw_Click(object sender, EventArgs e)
-        {
-            Invalidate();
-        }
+//        private void buttonRedraw_Click(object sender, EventArgs e)
+//        {
+////           
+//           
+
+//        }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
