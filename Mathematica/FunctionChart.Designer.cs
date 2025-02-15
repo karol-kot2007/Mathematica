@@ -1,4 +1,5 @@
-﻿namespace Mathematica
+﻿
+namespace Mathematica
 {
     partial class FunctionChart
     {
@@ -43,6 +44,11 @@
 
         }
 
-        #endregion
+    private void funchart_Load(object sender, EventArgs e)
+    {
+      throw new NotImplementedException();
     }
+
+    #endregion
+  }
 }

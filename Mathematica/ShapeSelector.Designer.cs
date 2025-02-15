@@ -20,267 +20,267 @@
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
+    #region Component Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
-            this.ShapeKindCb = new System.Windows.Forms.ComboBox();
-            this.drawBtn = new System.Windows.Forms.Button();
-            this.labelY2 = new System.Windows.Forms.Label();
-            this.Point2YTxt = new System.Windows.Forms.TextBox();
-            this.Point2XTxt = new System.Windows.Forms.TextBox();
-            this.labelY1 = new System.Windows.Forms.Label();
-            this.Point1YTxt = new System.Windows.Forms.TextBox();
-            this.labelX1 = new System.Windows.Forms.Label();
-            this.Point1XTxt = new System.Windows.Forms.TextBox();
-            this.Radius = new System.Windows.Forms.Label();
-            this.RadiusTxt = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Point3XTxt = new System.Windows.Forms.TextBox();
-            this.Point3YTxt = new System.Windows.Forms.TextBox();
-            this.labelY3 = new System.Windows.Forms.Label();
-            this.labelX2 = new System.Windows.Forms.Label();
-            this.labelX3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.ColorCb = new System.Windows.Forms.ComboBox();
-            this.SuspendLayout();
-            // 
-            // ShapeKindCb
-            // 
-            this.ShapeKindCb.AccessibleName = "ShapeType ";
-            this.ShapeKindCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ShapeKindCb.FormattingEnabled = true;
-            this.ShapeKindCb.Items.AddRange(new object[] {
-            "lines",
-            "circle",
-            "triangle"});
-            this.ShapeKindCb.Location = new System.Drawing.Point(80, 0);
-            this.ShapeKindCb.Name = "ShapeKindCb";
-            this.ShapeKindCb.Size = new System.Drawing.Size(121, 23);
-            this.ShapeKindCb.TabIndex = 0;
-            this.ShapeKindCb.SelectedIndexChanged += new System.EventHandler(this.ShapeKind_SelectedIndexChanged);
-            // 
-            // drawBtn
-            // 
-            this.drawBtn.Location = new System.Drawing.Point(3, 230);
-            this.drawBtn.Name = "drawBtn";
-            this.drawBtn.Size = new System.Drawing.Size(75, 23);
-            this.drawBtn.TabIndex = 1;
-            this.drawBtn.Text = "draw";
-            this.drawBtn.UseVisualStyleBackColor = true;
-            this.drawBtn.Click += new System.EventHandler(this.DrawClick);
-            // 
-            // labelY2
-            // 
-            this.labelY2.AutoSize = true;
-            this.labelY2.Location = new System.Drawing.Point(210, 60);
-            this.labelY2.Name = "labelY2";
-            this.labelY2.Size = new System.Drawing.Size(16, 15);
-            this.labelY2.TabIndex = 16;
-            this.labelY2.Text = "y ";
-            // 
-            // Point2YTxt
-            // 
-            this.Point2YTxt.Location = new System.Drawing.Point(232, 57);
-            this.Point2YTxt.Name = "Point2YTxt";
-            this.Point2YTxt.Size = new System.Drawing.Size(49, 23);
-            this.Point2YTxt.TabIndex = 14;
-            this.Point2YTxt.Text = "44";
-            // 
-            // Point2XTxt
-            // 
-            this.Point2XTxt.Location = new System.Drawing.Point(80, 57);
-            this.Point2XTxt.Name = "Point2XTxt";
-            this.Point2XTxt.Size = new System.Drawing.Size(41, 23);
-            this.Point2XTxt.TabIndex = 13;
-            this.Point2XTxt.Text = "100";
-            // 
-            // labelY1
-            // 
-            this.labelY1.AutoSize = true;
-            this.labelY1.Location = new System.Drawing.Point(210, 29);
-            this.labelY1.Name = "labelY1";
-            this.labelY1.Size = new System.Drawing.Size(16, 15);
-            this.labelY1.TabIndex = 12;
-            this.labelY1.Text = "y ";
-            this.labelY1.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // Point1YTxt
-            // 
-            this.Point1YTxt.Location = new System.Drawing.Point(232, 29);
-            this.Point1YTxt.Name = "Point1YTxt";
-            this.Point1YTxt.Size = new System.Drawing.Size(49, 23);
-            this.Point1YTxt.TabIndex = 11;
-            this.Point1YTxt.Text = "2";
-            // 
-            // labelX1
-            // 
-            this.labelX1.AutoSize = true;
-            this.labelX1.Location = new System.Drawing.Point(58, 29);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(16, 15);
-            this.labelX1.TabIndex = 10;
-            this.labelX1.Text = "x ";
-            // 
-            // Point1XTxt
-            // 
-            this.Point1XTxt.Location = new System.Drawing.Point(80, 29);
-            this.Point1XTxt.Name = "Point1XTxt";
-            this.Point1XTxt.Size = new System.Drawing.Size(41, 23);
-            this.Point1XTxt.TabIndex = 9;
-            this.Point1XTxt.Text = "2";
-            // 
-            // Radius
-            // 
-            this.Radius.AutoSize = true;
-            this.Radius.Location = new System.Drawing.Point(3, 152);
-            this.Radius.Name = "Radius";
-            this.Radius.Size = new System.Drawing.Size(39, 15);
-            this.Radius.TabIndex = 17;
-            this.Radius.Text = "radius";
-            this.Radius.Click += new System.EventHandler(this.Radius_Click);
-            // 
-            // RadiusTxt
-            // 
-            this.RadiusTxt.Location = new System.Drawing.Point(58, 152);
-            this.RadiusTxt.Name = "RadiusTxt";
-            this.RadiusTxt.Size = new System.Drawing.Size(100, 23);
-            this.RadiusTxt.TabIndex = 18;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 15);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Point 1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 15);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Point 2";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 15);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Point 3";
-            // 
-            // Point3XTxt
-            // 
-            this.Point3XTxt.Location = new System.Drawing.Point(80, 83);
-            this.Point3XTxt.Name = "Point3XTxt";
-            this.Point3XTxt.Size = new System.Drawing.Size(41, 23);
-            this.Point3XTxt.TabIndex = 24;
-            this.Point3XTxt.Text = "2";
-            // 
-            // Point3YTxt
-            // 
-            this.Point3YTxt.Location = new System.Drawing.Point(232, 86);
-            this.Point3YTxt.Name = "Point3YTxt";
-            this.Point3YTxt.Size = new System.Drawing.Size(49, 23);
-            this.Point3YTxt.TabIndex = 26;
-            this.Point3YTxt.Text = "22";
-            // 
-            // labelY3
-            // 
-            this.labelY3.AutoSize = true;
-            this.labelY3.Location = new System.Drawing.Point(210, 89);
-            this.labelY3.Name = "labelY3";
-            this.labelY3.Size = new System.Drawing.Size(13, 15);
-            this.labelY3.TabIndex = 28;
-            this.labelY3.Text = "y";
-            // 
-            // labelX2
-            // 
-            this.labelX2.AutoSize = true;
-            this.labelX2.Location = new System.Drawing.Point(58, 60);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(16, 15);
-            this.labelX2.TabIndex = 29;
-            this.labelX2.Text = "x ";
-            // 
-            // labelX3
-            // 
-            this.labelX3.AutoSize = true;
-            this.labelX3.Location = new System.Drawing.Point(58, 83);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(16, 15);
-            this.labelX3.TabIndex = 30;
-            this.labelX3.Text = "x ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 201);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 15);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "color";
-            // 
-            // ColorCb
-            // 
-            this.ColorCb.FormattingEnabled = true;
-            this.ColorCb.Items.AddRange(new object[] {
-            "Red",
-            "Blue",
-            "Green"});
-            this.ColorCb.Location = new System.Drawing.Point(58, 201);
-            this.ColorCb.Name = "ColorCb";
-            this.ColorCb.Size = new System.Drawing.Size(74, 23);
-            this.ColorCb.TabIndex = 32;
-            this.ColorCb.SelectedIndexChanged += new System.EventHandler(this.ColorCb_SelectedIndexChanged);
-            // 
-            // ShapeSelector
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.ColorCb);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.labelX3);
-            this.Controls.Add(this.labelX2);
-            this.Controls.Add(this.labelY3);
-            this.Controls.Add(this.Point3YTxt);
-            this.Controls.Add(this.Point3XTxt);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.RadiusTxt);
-            this.Controls.Add(this.Radius);
-            this.Controls.Add(this.labelY2);
-            this.Controls.Add(this.Point2YTxt);
-            this.Controls.Add(this.Point2XTxt);
-            this.Controls.Add(this.labelY1);
-            this.Controls.Add(this.Point1YTxt);
-            this.Controls.Add(this.labelX1);
-            this.Controls.Add(this.Point1XTxt);
-            this.Controls.Add(this.drawBtn);
-            this.Controls.Add(this.ShapeKindCb);
-            this.Name = "ShapeSelector";
-            this.Size = new System.Drawing.Size(335, 362);
-            this.Load += new System.EventHandler(this.ShapeSelector_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+    /// <summary> 
+    /// Required method for Designer support - do not modify 
+    /// the contents of this method with the code editor.
+    /// </summary>
+    private void InitializeComponent()
+    {
+      ShapeKindCb = new ComboBox();
+      drawBtn = new Button();
+      labelY2 = new Label();
+      Point2YTxt = new TextBox();
+      Point2XTxt = new TextBox();
+      labelY1 = new Label();
+      Point1YTxt = new TextBox();
+      labelX1 = new Label();
+      Point1XTxt = new TextBox();
+      Radius = new Label();
+      RadiusTxt = new TextBox();
+      label1 = new Label();
+      label2 = new Label();
+      label3 = new Label();
+      Point3XTxt = new TextBox();
+      Point3YTxt = new TextBox();
+      labelY3 = new Label();
+      labelX2 = new Label();
+      labelX3 = new Label();
+      label4 = new Label();
+      ColorCb = new ComboBox();
+      SuspendLayout();
+      // 
+      // ShapeKindCb
+      // 
+      ShapeKindCb.AccessibleName = "ShapeType ";
+      ShapeKindCb.DropDownStyle = ComboBoxStyle.DropDownList;
+      ShapeKindCb.FormattingEnabled = true;
+      ShapeKindCb.Items.AddRange(new object[] { "lines", "circle", "triangle" });
+      ShapeKindCb.Location = new Point(80, 0);
+      ShapeKindCb.Name = "ShapeKindCb";
+      ShapeKindCb.Size = new Size(121, 23);
+      ShapeKindCb.TabIndex = 0;
+      ShapeKindCb.SelectedIndexChanged += ShapeKind_SelectedIndexChanged;
+      // 
+      // drawBtn
+      // 
+      drawBtn.Location = new Point(3, 230);
+      drawBtn.Name = "drawBtn";
+      drawBtn.Size = new Size(75, 23);
+      drawBtn.TabIndex = 1;
+      drawBtn.Text = "draw";
+      drawBtn.UseVisualStyleBackColor = true;
+      drawBtn.Click += DrawClick;
+      // 
+      // labelY2
+      // 
+      labelY2.AutoSize = true;
+      labelY2.Location = new Point(210, 60);
+      labelY2.Name = "labelY2";
+      labelY2.Size = new Size(16, 15);
+      labelY2.TabIndex = 16;
+      labelY2.Text = "y ";
+      // 
+      // Point2YTxt
+      // 
+      Point2YTxt.Location = new Point(232, 57);
+      Point2YTxt.Name = "Point2YTxt";
+      Point2YTxt.Size = new Size(49, 23);
+      Point2YTxt.TabIndex = 14;
+      Point2YTxt.Text = "44";
+      Point2YTxt.TextAlign = HorizontalAlignment.Center;
+      // 
+      // Point2XTxt
+      // 
+      Point2XTxt.Location = new Point(80, 57);
+      Point2XTxt.Name = "Point2XTxt";
+      Point2XTxt.Size = new Size(41, 23);
+      Point2XTxt.TabIndex = 13;
+      Point2XTxt.Text = "100";
+      Point2XTxt.TextAlign = HorizontalAlignment.Center;
+      // 
+      // labelY1
+      // 
+      labelY1.AutoSize = true;
+      labelY1.Location = new Point(210, 29);
+      labelY1.Name = "labelY1";
+      labelY1.Size = new Size(16, 15);
+      labelY1.TabIndex = 12;
+      labelY1.Text = "y ";
+      labelY1.Click += label2_Click;
+      // 
+      // Point1YTxt
+      // 
+      Point1YTxt.Location = new Point(232, 29);
+      Point1YTxt.Name = "Point1YTxt";
+      Point1YTxt.Size = new Size(49, 23);
+      Point1YTxt.TabIndex = 11;
+      Point1YTxt.Text = "2";
+      Point1YTxt.TextAlign = HorizontalAlignment.Center;
+      // 
+      // labelX1
+      // 
+      labelX1.AutoSize = true;
+      labelX1.Location = new Point(58, 29);
+      labelX1.Name = "labelX1";
+      labelX1.Size = new Size(16, 15);
+      labelX1.TabIndex = 10;
+      labelX1.Text = "x ";
+      // 
+      // Point1XTxt
+      // 
+      Point1XTxt.Location = new Point(80, 29);
+      Point1XTxt.Name = "Point1XTxt";
+      Point1XTxt.Size = new Size(41, 23);
+      Point1XTxt.TabIndex = 9;
+      Point1XTxt.Text = "2";
+      Point1XTxt.TextAlign = HorizontalAlignment.Center;
+      // 
+      // Radius
+      // 
+      Radius.AutoSize = true;
+      Radius.Location = new Point(3, 152);
+      Radius.Name = "Radius";
+      Radius.Size = new Size(39, 15);
+      Radius.TabIndex = 17;
+      Radius.Text = "radius";
+      Radius.Click += Radius_Click;
+      // 
+      // RadiusTxt
+      // 
+      RadiusTxt.Location = new Point(58, 152);
+      RadiusTxt.Name = "RadiusTxt";
+      RadiusTxt.Size = new Size(100, 23);
+      RadiusTxt.TabIndex = 18;
+      RadiusTxt.TextAlign = HorizontalAlignment.Center;
+      // 
+      // label1
+      // 
+      label1.AutoSize = true;
+      label1.Location = new Point(0, 29);
+      label1.Name = "label1";
+      label1.Size = new Size(44, 15);
+      label1.TabIndex = 19;
+      label1.Text = "Point 1";
+      // 
+      // label2
+      // 
+      label2.AutoSize = true;
+      label2.Location = new Point(3, 62);
+      label2.Name = "label2";
+      label2.Size = new Size(44, 15);
+      label2.TabIndex = 20;
+      label2.Text = "Point 2";
+      // 
+      // label3
+      // 
+      label3.AutoSize = true;
+      label3.Location = new Point(3, 83);
+      label3.Name = "label3";
+      label3.Size = new Size(44, 15);
+      label3.TabIndex = 21;
+      label3.Text = "Point 3";
+      // 
+      // Point3XTxt
+      // 
+      Point3XTxt.Location = new Point(80, 83);
+      Point3XTxt.Name = "Point3XTxt";
+      Point3XTxt.Size = new Size(41, 23);
+      Point3XTxt.TabIndex = 24;
+      Point3XTxt.Text = "2";
+      Point3XTxt.TextAlign = HorizontalAlignment.Center;
+      // 
+      // Point3YTxt
+      // 
+      Point3YTxt.Location = new Point(232, 86);
+      Point3YTxt.Name = "Point3YTxt";
+      Point3YTxt.Size = new Size(49, 23);
+      Point3YTxt.TabIndex = 26;
+      Point3YTxt.Text = "22";
+      Point3YTxt.TextAlign = HorizontalAlignment.Center;
+      // 
+      // labelY3
+      // 
+      labelY3.AutoSize = true;
+      labelY3.Location = new Point(210, 89);
+      labelY3.Name = "labelY3";
+      labelY3.Size = new Size(13, 15);
+      labelY3.TabIndex = 28;
+      labelY3.Text = "y";
+      // 
+      // labelX2
+      // 
+      labelX2.AutoSize = true;
+      labelX2.Location = new Point(58, 60);
+      labelX2.Name = "labelX2";
+      labelX2.Size = new Size(16, 15);
+      labelX2.TabIndex = 29;
+      labelX2.Text = "x ";
+      // 
+      // labelX3
+      // 
+      labelX3.AutoSize = true;
+      labelX3.Location = new Point(58, 83);
+      labelX3.Name = "labelX3";
+      labelX3.Size = new Size(16, 15);
+      labelX3.TabIndex = 30;
+      labelX3.Text = "x ";
+      // 
+      // label4
+      // 
+      label4.AutoSize = true;
+      label4.Location = new Point(4, 201);
+      label4.Name = "label4";
+      label4.Size = new Size(34, 15);
+      label4.TabIndex = 31;
+      label4.Text = "color";
+      // 
+      // ColorCb
+      // 
+      ColorCb.FormattingEnabled = true;
+      ColorCb.Items.AddRange(new object[] { "Red", "Blue", "Green" });
+      ColorCb.Location = new Point(58, 201);
+      ColorCb.Name = "ColorCb";
+      ColorCb.Size = new Size(74, 23);
+      ColorCb.TabIndex = 32;
+      ColorCb.SelectedIndexChanged += ColorCb_SelectedIndexChanged;
+      // 
+      // ShapeSelector
+      // 
+      AutoScaleDimensions = new SizeF(7F, 15F);
+      AutoScaleMode = AutoScaleMode.Font;
+      Controls.Add(ColorCb);
+      Controls.Add(label4);
+      Controls.Add(labelX3);
+      Controls.Add(labelX2);
+      Controls.Add(labelY3);
+      Controls.Add(Point3YTxt);
+      Controls.Add(Point3XTxt);
+      Controls.Add(label3);
+      Controls.Add(label2);
+      Controls.Add(label1);
+      Controls.Add(RadiusTxt);
+      Controls.Add(Radius);
+      Controls.Add(labelY2);
+      Controls.Add(Point2YTxt);
+      Controls.Add(Point2XTxt);
+      Controls.Add(labelY1);
+      Controls.Add(Point1YTxt);
+      Controls.Add(labelX1);
+      Controls.Add(Point1XTxt);
+      Controls.Add(drawBtn);
+      Controls.Add(ShapeKindCb);
+      Name = "ShapeSelector";
+      Size = new Size(335, 362);
+      Load += ShapeSelector_Load;
+      ResumeLayout(false);
+      PerformLayout();
+    }
 
-        }
+    #endregion
 
-        #endregion
-
-        private ComboBox ShapeKindCb;
+    private ComboBox ShapeKindCb;
         private Button drawBtn;
         private Label labelY2;
         private TextBox Point2YTxt;

@@ -38,18 +38,44 @@ namespace Mathematica
             else if (ShapeSelector.ShapeKind == "triangle")
             {
 
-                e.Graphics.DrawLine(Pen, ShapeSelector.Point1, ShapeSelector.Point2);
-                e.Graphics.DrawLine(Pen, ShapeSelector.Point2, ShapeSelector.Point3);
-                e.Graphics.DrawLine(Pen, ShapeSelector.Point3, ShapeSelector.Point1);
+                DrawLine(e);
+                DrawLine(e);
             }
 
         }
+
+        public void DrawLine(PaintEventArgs e)
+        {
+            var pt1 = ShapeSelector.Point1;
+            var pt2 = ShapeSelector.Point2;
+            var pt3 = ShapeSelector.Point3;
+
+            var pt11 = MovetoCenter(pt1);
+            var pt22 = MovetoCenter(pt2);
+            var pt33 = MovetoCenter(pt3);
+
+            e.Graphics.DrawLine(Pen, pt11, pt22);
+            e.Graphics.DrawLine(Pen, pt22, pt33);
+        }
         public void DrawLinePointF(PaintEventArgs e)
         {
+            var pt1 = ShapeSelector.Point1;
+            var pt2 = ShapeSelector.Point2;
 
-
-            e.Graphics.DrawLine(Pen, ShapeSelector.Point1, ShapeSelector.Point2);
+            var pt11 = MovetoCenter(pt1);
+            var pt22 = MovetoCenter(pt2);
+            //Size.X
+            //    Size.Y
+            e.Graphics.DrawLine(Pen, pt11, pt22);
         }
+
+        private PointF MovetoCenter(PointF pt)
+        {
+            pt.X += Size.Width / 2;
+            pt.Y += Size.Height / 2;
+            return pt;
+        }
+
         private void DrawCircle1(PaintEventArgs e)
         {
             // Create pen.
