@@ -28,8 +28,6 @@ namespace Mathematica
         public ShapeSelector()
         {
             InitializeComponent();
-
-           
         }
 
         private void DrawClick(object sender, EventArgs e)

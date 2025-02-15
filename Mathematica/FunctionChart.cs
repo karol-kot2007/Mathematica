@@ -14,13 +14,10 @@ namespace Mathematica
     {
         public Point ChartLineYTop { get; set; }
         public Point ChartLineYBottom { get; set; }
-
         public Point ChartLineXLeft { get; set; }
         public Point ChartLineXRight { get; set; }
-
         internal Line AxisY { get; set; }
         internal Line AxisX { get; set; }
-
         internal Arrow ArrowY { get; set; }
         internal Arrow ArrowX { get; set; }
     List<Line>  chartAxisLines;
@@ -30,8 +27,6 @@ namespace Mathematica
         public FunctionChart()
         {
             InitializeComponent();
-
-            
         }
 
    public void createChartAxisX()
@@ -56,19 +51,30 @@ namespace Mathematica
     }
     private void createChartAxis(object sender, EventArgs e)
     {
-    
-     
-  
-
-    
-      
-     
       chartAxisLines = new List<Line>();
       createChartAxisX();
       createChartAxisY();
+    }
+    private void funchart_Load(object sender, EventArgs e)
+    {
+      AxisX = new Line(ChartLineXLeft, ChartLineXRight);
+      AxisY = new Line(ChartLineYTop, ChartLineYBottom);
+      ArrowY = new Arrow();
+
+      var pt = ChartLineYTop;
+      pt.X = pt.X - 6;
+      pt.Y = pt.Y + 10;
+      ArrowY.Line1 = new Line(pt, ChartLineYTop);
+      pt.X = pt.X + 12;
+      ArrowY.Line2 = new Line(ChartLineYTop, pt);
+
+      chartAxisLines = new List<Line>();
+      chartAxisLines.Add(AxisX);
+      chartAxisLines.Add(AxisY);
+      chartAxisLines.Add(ArrowY.Line1);
+      chartAxisLines.Add(ArrowY.Line2);
 
     }
-
     private void panel2_Paint(object sender, PaintEventArgs e)
         {
 

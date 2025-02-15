@@ -6,9 +6,9 @@ namespace Mathematica
 {
     
    
-    public partial class Form1 : Form
+    public partial class FunctionChartForm : Form
     {
-       public Form1()
+       public FunctionChartForm()
         {
             InitializeComponent();
 

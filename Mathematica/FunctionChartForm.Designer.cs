@@ -1,6 +1,6 @@
 ﻿namespace Mathematica
 {
-    partial class Form1
+    partial class FunctionChartForm
     {
         /// <summary>
         ///  Required designer variable.

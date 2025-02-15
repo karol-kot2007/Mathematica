@@ -134,7 +134,7 @@
       Point1XTxt.Name = "Point1XTxt";
       Point1XTxt.Size = new Size(41, 23);
       Point1XTxt.TabIndex = 9;
-      Point1XTxt.Text = "2";
+      Point1XTxt.Text = "23";
       Point1XTxt.TextAlign = HorizontalAlignment.Center;
       // 
       // Radius
