@@ -38,12 +38,21 @@ namespace Mathematica
     {
       AxisX = new Line(ChartLineXLeft, ChartLineXRight);
       ArrowX = new Arrow();
+      var ptX = ChartLineXLeft;
+      ptX.X = ptX.X - 6;
+      ArrowX.Line1 = new Line(ptX, ChartLineXLeft);
     }
 
     public void createChartAxisY()
     {
       AxisY = new Line(ChartLineYTop, ChartLineYBottom);
       ArrowY = new Arrow();
+      var pt = ChartLineYTop;
+      pt.X = pt.X - 6;
+      pt.Y = pt.Y + 10;
+      ArrowY.Line1 = new Line(pt, ChartLineYTop);
+      pt.X = pt.X + 12;
+      ArrowY.Line2 = new Line(ChartLineYTop, pt);
     }
     private void createChartAxis(object sender, EventArgs e)
     {
@@ -51,13 +60,9 @@ namespace Mathematica
      
   
 
-      var pt = ChartLineYTop;
-      pt.X = pt.X - 6;
-      pt.Y = pt.Y + 10;
-      ArrowY.Line1 = new Line(pt, ChartLineYTop);
-      pt.X = pt.X + 12;
-      ArrowY.Line2 = new Line(ChartLineYTop, pt);
-
+    
+      
+     
       chartAxisLines = new List<Line>();
       createChartAxisX();
       createChartAxisY();
