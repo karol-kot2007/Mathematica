@@ -34,14 +34,16 @@ namespace Mathematica
       AxisX = new Line(ChartLineXLeft, ChartLineXRight);
       ArrowX = new Arrow();
       var pt = ChartLineXLeft;
-      //pt.X = pt.X - 6;
-      //pt.Y = pt.Y + 10;
+
       pt.Y = pt.Y - 6;
       pt.X = pt.X + 10;
-      ArrowX.Line1 = new Line(pt, ChartLineXLeft);
-      //pt.X = pt.X + 12;
+      ArrowX.Line1 = new Line(pt, ChartLineXRight);
+
       pt.Y = pt.Y + 12;
-      ArrowY.Line2 = new Line(ChartLineXLeft, pt);
+      ArrowY.Line2 = new Line(ChartLineXRight, pt);
+      //pt.X = pt.X - 6;
+      //pt.Y = pt.Y + 10;
+      //pt.X = pt.X + 12;
     }
 
     public void createChartAxisY()
@@ -66,20 +68,28 @@ namespace Mathematica
       AxisX = new Line(ChartLineXLeft, ChartLineXRight);
       AxisY = new Line(ChartLineYTop, ChartLineYBottom);
       ArrowY = new Arrow();
-
+      ArrowX = new Arrow();
       var pt = ChartLineYTop;
+      var pt2 = ChartLineXRight;
       pt.X = pt.X - 6;
       pt.Y = pt.Y + 10;
       ArrowY.Line1 = new Line(pt, ChartLineYTop);
       pt.X = pt.X + 12;
       ArrowY.Line2 = new Line(ChartLineYTop, pt);
+     
+      pt2.X = pt2.X -10;  
+      pt2.Y = pt2.Y + -12;
+      ArrowX.Line1 = new Line(pt2, ChartLineXRight);
+      pt2.Y = pt2.Y +20;
+      ArrowX.Line2 = new Line(ChartLineXRight, pt2);
 
       chartAxisLines = new List<Line>();
       chartAxisLines.Add(AxisX);
       chartAxisLines.Add(AxisY);
       chartAxisLines.Add(ArrowY.Line1);
       chartAxisLines.Add(ArrowY.Line2);
-
+      chartAxisLines.Add(ArrowX.Line1);
+      chartAxisLines.Add(ArrowX.Line2);
     }
     private void panel2_Paint(object sender, PaintEventArgs e)
     {
