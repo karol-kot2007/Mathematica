@@ -15,7 +15,7 @@ namespace Mathematica
     public MainForm()
     {
       InitializeComponent();
-      
+
     }
 
     private void MainForm_Load(object sender, EventArgs e)
@@ -27,14 +27,14 @@ namespace Mathematica
     {
       FunctionChartForm f2 = new FunctionChartForm();
       f2.Show();
-      Visible = false;
+    
     }
 
     private void shapes_Click(object sender, EventArgs e)
     {
-     Shapes f2 = new Shapes();
+      Shapes f2 = new Shapes();
       f2.Show();
-      Visible=false;
+     
     }
   }
 }

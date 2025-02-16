@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Mathematica
 {
-    internal class Arrow
+  internal class Arrow
+  {
+    public Line Line1;
+    public Line Line2;
+    public Arrow()
     {
-        public Line Line1;
-        public Line Line2;
-        public Arrow()
-        {
-            
-        }
+
     }
+  }
 }

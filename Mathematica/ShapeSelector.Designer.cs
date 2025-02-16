@@ -1,24 +1,24 @@
 ﻿namespace Mathematica
 {
-    partial class ShapeSelector
-    {
-        /// <summary> 
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+  partial class ShapeSelector
+  {
+    /// <summary> 
+    /// Required designer variable.
+    /// </summary>
+    private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+    /// <summary> 
+    /// Clean up any resources being used.
+    /// </summary>
+    /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    protected override void Dispose(bool disposing)
+    {
+      if (disposing && (components != null))
+      {
+        components.Dispose();
+      }
+      base.Dispose(disposing);
+    }
 
     #region Component Designer generated code
 
@@ -281,25 +281,25 @@
     #endregion
 
     private ComboBox ShapeKindCb;
-        private Button drawBtn;
-        private Label labelY2;
-        private TextBox Point2YTxt;
-        private TextBox Point2XTxt;
-        private Label labelY1;
-        private TextBox Point1YTxt;
-        private Label labelX1;
-        private TextBox Point1XTxt;
-        private Label Radius;
-        private TextBox RadiusTxt;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private TextBox Point3XTxt;
-        private TextBox Point3YTxt;
-        private Label labelY3;
-        private Label labelX2;
-        private Label labelX3;
-        private Label label4;
-        private ComboBox ColorCb;
-    }
+    private Button drawBtn;
+    private Label labelY2;
+    private TextBox Point2YTxt;
+    private TextBox Point2XTxt;
+    private Label labelY1;
+    private TextBox Point1YTxt;
+    private Label labelX1;
+    private TextBox Point1XTxt;
+    private Label Radius;
+    private TextBox RadiusTxt;
+    private Label label1;
+    private Label label2;
+    private Label label3;
+    private TextBox Point3XTxt;
+    private TextBox Point3YTxt;
+    private Label labelY3;
+    private Label labelX2;
+    private Label labelX3;
+    private Label label4;
+    private ComboBox ColorCb;
+  }
 }
