@@ -28,32 +28,31 @@
     /// </summary>
     private void InitializeComponent()
     {
-      this.functionChart1 = new Mathematica.FunctionChart();
-      this.SuspendLayout();
+      functionChart1 = new FunctionChart();
+      SuspendLayout();
       // 
       // functionChart1
       // 
-      this.functionChart1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-      this.functionChart1.ChartLineXLeft = new System.Drawing.Point(10, 400);
-      this.functionChart1.ChartLineXRight = new System.Drawing.Point(500, 400);
-      this.functionChart1.ChartLineYBottom = new System.Drawing.Point(10, 400);
-      this.functionChart1.ChartLineYTop = new System.Drawing.Point(10, 10);
-      this.functionChart1.Location = new System.Drawing.Point(1, 1);
-      this.functionChart1.Name = "functionChart1";
-      this.functionChart1.Size = new System.Drawing.Size(982, 674);
-      this.functionChart1.TabIndex = 0;
+      functionChart1.BorderStyle = BorderStyle.FixedSingle;
+      functionChart1.ChartLineXLeft = new Point(10, 400);
+      functionChart1.ChartLineXRight = new Point(500, 400);
+      functionChart1.ChartLineYBottom = new Point(10, 400);
+      functionChart1.ChartLineYTop = new Point(10, 10);
+      functionChart1.Location = new Point(1, 1);
+      functionChart1.Name = "functionChart1";
+      functionChart1.Size = new Size(982, 674);
+      functionChart1.TabIndex = 0;
       // 
-      // Form1
+      // FunctionChartForm
       // 
-      this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-      this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-      this.ClientSize = new System.Drawing.Size(995, 677);
-      this.Controls.Add(this.functionChart1);
-      this.Name = "Form1";
-      this.Text = "Form1";
-      this.ResumeLayout(false);
-
+      AutoScaleDimensions = new SizeF(7F, 15F);
+      AutoScaleMode = AutoScaleMode.Font;
+      BackColor = SystemColors.ActiveCaption;
+      ClientSize = new Size(1159, 624);
+      Controls.Add(functionChart1);
+      Name = "FunctionChartForm";
+      Text = "Form1";
+      ResumeLayout(false);
     }
 
     #endregion

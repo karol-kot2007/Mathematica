@@ -77,10 +77,10 @@ namespace Mathematica
       pt.X = pt.X + 12;
       ArrowY.Line2 = new Line(ChartLineYTop, pt);
      
-      pt2.X = pt2.X -10;  
-      pt2.Y = pt2.Y + -12;
+      pt2.X = pt2.X - 7;
+      pt2.Y = pt2.Y - 7;
       ArrowX.Line1 = new Line(pt2, ChartLineXRight);
-      pt2.Y = pt2.Y +20;
+      pt2.Y = pt2.Y + 14;
       ArrowX.Line2 = new Line(ChartLineXRight, pt2);
 
       chartAxisLines = new List<Line>();
