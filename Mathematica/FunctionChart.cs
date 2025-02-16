@@ -10,32 +10,38 @@ using System.Windows.Forms;
 
 namespace Mathematica
 {
-    public partial class FunctionChart : UserControl
+  public partial class FunctionChart : UserControl
+  {
+    public Point ChartLineYTop { get; set; }
+    public Point ChartLineYBottom { get; set; }
+    public Point ChartLineXLeft { get; set; }
+    public Point ChartLineXRight { get; set; }
+    internal Line AxisY { get; set; }
+    internal Line AxisX { get; set; }
+    internal Arrow ArrowY { get; set; }
+    internal Arrow ArrowX { get; set; }
+    List<Line> chartAxisLines;
+
+
+
+    public FunctionChart()
     {
-        public Point ChartLineYTop { get; set; }
-        public Point ChartLineYBottom { get; set; }
-        public Point ChartLineXLeft { get; set; }
-        public Point ChartLineXRight { get; set; }
-        internal Line AxisY { get; set; }
-        internal Line AxisX { get; set; }
-        internal Arrow ArrowY { get; set; }
-        internal Arrow ArrowX { get; set; }
-    List<Line>  chartAxisLines;
+      InitializeComponent();
+    }
 
-
-
-        public FunctionChart()
-        {
-            InitializeComponent();
-        }
-
-   public void createChartAxisX()
+    public void createChartAxisX()
     {
       AxisX = new Line(ChartLineXLeft, ChartLineXRight);
       ArrowX = new Arrow();
-      var ptX = ChartLineXLeft;
-      ptX.X = ptX.X - 6;
-      ArrowX.Line1 = new Line(ptX, ChartLineXLeft);
+      var pt = ChartLineXLeft;
+      //pt.X = pt.X - 6;
+      //pt.Y = pt.Y + 10;
+      pt.Y = pt.Y - 6;
+      pt.X = pt.X + 10;
+      ArrowX.Line1 = new Line(pt, ChartLineXLeft);
+      //pt.X = pt.X + 12;
+      pt.Y = pt.Y + 12;
+      ArrowY.Line2 = new Line(ChartLineXLeft, pt);
     }
 
     public void createChartAxisY()
@@ -76,20 +82,20 @@ namespace Mathematica
 
     }
     private void panel2_Paint(object sender, PaintEventArgs e)
-        {
+    {
 
-        }
-
-        private void FunctionChart_Paint(object sender, PaintEventArgs e)
-        {
-            foreach(var line in chartAxisLines)
-            {
-                e.Graphics.DrawLine(Pens.Gray, line.Start, line.End);
-            }
-            //e.Graphics.DrawLine(Pens.Gray, AxisY.Start, AxisY.End);
-            //e.Graphics.DrawLine(Pens.Gray, AxisX.Start, AxisX.End);
-            //e.Graphics.DrawLine(Pens.Gray, ArrowY.Line1.Start, ArrowY.Line1.End);
-            //e.Graphics.DrawLine(Pens.Gray, ArrowY.Line2.Start, ArrowY.Line2.End);
-        }
     }
+
+    private void FunctionChart_Paint(object sender, PaintEventArgs e)
+    {
+      foreach (var line in chartAxisLines)
+      {
+        e.Graphics.DrawLine(Pens.Gray, line.Start, line.End);
+      }
+      //e.Graphics.DrawLine(Pens.Gray, AxisY.Start, AxisY.End);
+      //e.Graphics.DrawLine(Pens.Gray, AxisX.Start, AxisX.End);
+      //e.Graphics.DrawLine(Pens.Gray, ArrowY.Line1.Start, ArrowY.Line1.End);
+      //e.Graphics.DrawLine(Pens.Gray, ArrowY.Line2.Start, ArrowY.Line2.End);
+    }
+  }
 }
