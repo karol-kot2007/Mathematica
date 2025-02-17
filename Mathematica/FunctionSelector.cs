@@ -12,20 +12,30 @@ namespace Mathematica
 {
   public partial class FunctionSelector : UserControl
   {
+    public event EventHandler ShapeComboChanged;
+    public string FunType
+    {
+      get;
+      set;
+    }
     public FunctionSelector()
     {
       InitializeComponent();
-      
+      linearFunction1.Visible = false;
+      quadraticFunction1.Visible = false;
     }
 
     private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
     {
-      if (comboBox1.SelectedIndex == 0)
+     FunType = comboBox1.Text;
+      if(this.FunType == "Linear function")
       {
         linearFunction1.Visible = true;
+        quadraticFunction1.Visible = false;
       }
-      else if (comboBox1.SelectedIndex == 1)
+      else if(this.FunType == "Quadratic function")
       {
+        linearFunction1.Visible = false;
         quadraticFunction1.Visible = true;
       }
     }
@@ -34,12 +44,13 @@ namespace Mathematica
     {
       //LinearFunction linearFunction = new LinearFunction();
       //linearFunction.Visible = false;
+      LinearFunction linearFunction = new LinearFunction();
+      linearFunction.Visible = false;
     }
 
     private void linearFunction1_Load(object sender, EventArgs e)
     {
-      LinearFunction linearFunction = new LinearFunction();
-      linearFunction.Visible = false;
+     
     }
 
     private void button1_Click(object sender, EventArgs e)
@@ -49,8 +60,7 @@ namespace Mathematica
 
     private void quadraticFunction1_Load(object sender, EventArgs e)
     {
-      quadraticFunction1 = new QuadraticFunction();
-      quadraticFunction1.Visible = false;
+      
     }
   }
 }

@@ -40,8 +40,9 @@
       comboBox1.Items.AddRange(new object[] { "Linear function", "Quadratic function" });
       comboBox1.Location = new Point(43, 49);
       comboBox1.Name = "comboBox1";
-      comboBox1.Size = new Size(121, 23);
+      comboBox1.Size = new Size(150, 23);
       comboBox1.TabIndex = 0;
+      comboBox1.Text = "Select function type";
       comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
       // 
       // button1
@@ -56,7 +57,8 @@
       // 
       // linearFunction1
       // 
-      linearFunction1.Location = new Point(173, 0);
+      linearFunction1.AccessibleName = "linear_fun";
+      linearFunction1.Location = new Point(199, 0);
       linearFunction1.Name = "linearFunction1";
       linearFunction1.Size = new Size(259, 299);
       linearFunction1.TabIndex = 2;
@@ -64,6 +66,7 @@
       // 
       // quadraticFunction1
       // 
+      quadraticFunction1.AccessibleName = "quadra_fun";
       quadraticFunction1.Location = new Point(464, 0);
       quadraticFunction1.Name = "quadraticFunction1";
       quadraticFunction1.Size = new Size(431, 425);

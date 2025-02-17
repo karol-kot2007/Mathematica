@@ -41,27 +41,27 @@
       label1.AutoSize = true;
       label1.Location = new Point(48, 68);
       label1.Name = "label1";
-      label1.Size = new Size(38, 15);
+      label1.Size = new Size(13, 15);
       label1.TabIndex = 0;
-      label1.Text = "label1";
+      label1.Text = "a";
       // 
       // label2
       // 
       label2.AutoSize = true;
       label2.Location = new Point(48, 108);
       label2.Name = "label2";
-      label2.Size = new Size(38, 15);
+      label2.Size = new Size(14, 15);
       label2.TabIndex = 1;
-      label2.Text = "label2";
+      label2.Text = "b";
       // 
       // label3
       // 
       label3.AutoSize = true;
       label3.Location = new Point(48, 156);
       label3.Name = "label3";
-      label3.Size = new Size(38, 15);
+      label3.Size = new Size(13, 15);
       label3.TabIndex = 2;
-      label3.Text = "label3";
+      label3.Text = "c";
       // 
       // textBox1
       // 

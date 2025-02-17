@@ -29,6 +29,7 @@
     private void InitializeComponent()
     {
       functionChart1 = new FunctionChart();
+      functionSelector1 = new FunctionSelector();
       SuspendLayout();
       // 
       // functionChart1
@@ -43,12 +44,20 @@
       functionChart1.Size = new Size(982, 674);
       functionChart1.TabIndex = 0;
       // 
+      // functionSelector1
+      // 
+      functionSelector1.Location = new Point(183, 12);
+      functionSelector1.Name = "functionSelector1";
+      functionSelector1.Size = new Size(689, 332);
+      functionSelector1.TabIndex = 1;
+      // 
       // FunctionChartForm
       // 
       AutoScaleDimensions = new SizeF(7F, 15F);
       AutoScaleMode = AutoScaleMode.Font;
       BackColor = SystemColors.ActiveCaption;
       ClientSize = new Size(1159, 624);
+      Controls.Add(functionSelector1);
       Controls.Add(functionChart1);
       Name = "FunctionChartForm";
       Text = "Form1";
@@ -58,5 +67,6 @@
     #endregion
 
     private FunctionChart functionChart1;
+    private FunctionSelector functionSelector1;
   }
 }
