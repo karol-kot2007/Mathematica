@@ -1,6 +1,6 @@
-namespace CalculateTest1.Framework
+namespace Calculate.TestProject1
 {
-  public class CalculateTests
+  public class TestsCalculate
   {
     [SetUp]
     public void Setup()

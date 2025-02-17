@@ -1,6 +1,6 @@
-namespace CalculateTest1.Framework
+namespace TestProject
 {
-  public class CalculateTests
+  public class Tests
   {
     [SetUp]
     public void Setup()
@@ -8,7 +8,7 @@ namespace CalculateTest1.Framework
     }
 
     [Test]
-    public void CalculateTest1()
+    public void Test1()
     {
       Assert.Pass();
     }
