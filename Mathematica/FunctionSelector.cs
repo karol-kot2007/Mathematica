@@ -27,13 +27,13 @@ namespace Mathematica
 
     private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
     {
-     FunType = comboBox1.Text;
-      if(this.FunType == "Linear function")
+      FunType = comboBox1.Text;
+      if (this.FunType == "Linear function")
       {
         linearFunction1.Visible = true;
         quadraticFunction1.Visible = false;
       }
-      else if(this.FunType == "Quadratic function")
+      else if (this.FunType == "Quadratic function")
       {
         linearFunction1.Visible = false;
         quadraticFunction1.Visible = true;
@@ -42,15 +42,12 @@ namespace Mathematica
 
     private void FunctionSelector_Load(object sender, EventArgs e)
     {
-      //LinearFunction linearFunction = new LinearFunction();
-      //linearFunction.Visible = false;
-      LinearFunction linearFunction = new LinearFunction();
-      linearFunction.Visible = false;
+
     }
 
     private void linearFunction1_Load(object sender, EventArgs e)
     {
-     
+
     }
 
     private void button1_Click(object sender, EventArgs e)
@@ -60,7 +57,7 @@ namespace Mathematica
 
     private void quadraticFunction1_Load(object sender, EventArgs e)
     {
-      
+
     }
   }
 }
