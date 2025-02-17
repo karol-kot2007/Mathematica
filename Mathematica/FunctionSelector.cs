@@ -15,17 +15,42 @@ namespace Mathematica
     public FunctionSelector()
     {
       InitializeComponent();
+      
     }
 
     private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
     {
-
+      if (comboBox1.SelectedIndex == 0)
+      {
+        linearFunction1.Visible = true;
+      }
+      else if (comboBox1.SelectedIndex == 1)
+      {
+        quadraticFunction1.Visible = true;
+      }
     }
 
     private void FunctionSelector_Load(object sender, EventArgs e)
     {
-      LinearFunction li =  new LinearFunction();
-      li.Visible = true;
+      //LinearFunction linearFunction = new LinearFunction();
+      //linearFunction.Visible = false;
+    }
+
+    private void linearFunction1_Load(object sender, EventArgs e)
+    {
+      LinearFunction linearFunction = new LinearFunction();
+      linearFunction.Visible = false;
+    }
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private void quadraticFunction1_Load(object sender, EventArgs e)
+    {
+      quadraticFunction1 = new QuadraticFunction();
+      quadraticFunction1.Visible = false;
     }
   }
 }
