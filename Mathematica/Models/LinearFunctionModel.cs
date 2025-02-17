@@ -25,5 +25,10 @@ namespace Mathematica.Models
       }
     }
 
+    public void Calculate(int minX, int maxX)
+    {
+     
+      
+    }
   }
 }
