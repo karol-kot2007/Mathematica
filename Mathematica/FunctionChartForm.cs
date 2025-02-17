@@ -4,16 +4,19 @@ using System.Windows.Forms;
 
 namespace Mathematica
 {
-    
-   
-    public partial class FunctionChartForm : Form
+
+
+  public partial class FunctionChartForm : Form
+  {
+    public FunctionChartForm()
     {
-       public FunctionChartForm()
-        {
-            InitializeComponent();
+      InitializeComponent();
 
-        }
-
- 
     }
+
+    private void functionSelector1_Load(object sender, EventArgs e)
+    {
+
+    }
+  }
 }

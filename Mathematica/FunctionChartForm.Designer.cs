@@ -46,17 +46,19 @@
       // 
       // functionSelector1
       // 
-      functionSelector1.Location = new Point(183, 12);
+      functionSelector1.FunType = null;
+      functionSelector1.Location = new Point(989, 55);
       functionSelector1.Name = "functionSelector1";
-      functionSelector1.Size = new Size(689, 332);
+      functionSelector1.Size = new Size(616, 332);
       functionSelector1.TabIndex = 1;
+      functionSelector1.Load += functionSelector1_Load;
       // 
       // FunctionChartForm
       // 
       AutoScaleDimensions = new SizeF(7F, 15F);
       AutoScaleMode = AutoScaleMode.Font;
       BackColor = SystemColors.ActiveCaption;
-      ClientSize = new Size(1159, 624);
+      ClientSize = new Size(1602, 958);
       Controls.Add(functionSelector1);
       Controls.Add(functionChart1);
       Name = "FunctionChartForm";

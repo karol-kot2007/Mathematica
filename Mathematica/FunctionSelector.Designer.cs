@@ -67,7 +67,7 @@
       // quadraticFunction1
       // 
       quadraticFunction1.AccessibleName = "quadra_fun";
-      quadraticFunction1.Location = new Point(464, 0);
+      quadraticFunction1.Location = new Point(212, 0);
       quadraticFunction1.Name = "quadraticFunction1";
       quadraticFunction1.Size = new Size(431, 425);
       quadraticFunction1.TabIndex = 3;
