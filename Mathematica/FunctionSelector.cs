@@ -52,7 +52,8 @@ namespace Mathematica
 
     private void button1_Click(object sender, EventArgs e)
     {
-
+     
+     
     }
 
     private void quadraticFunction1_Load(object sender, EventArgs e)

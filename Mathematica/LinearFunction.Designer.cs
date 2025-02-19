@@ -30,10 +30,11 @@
     {
       label1 = new Label();
       label2 = new Label();
-      numericUpDown1 = new NumericUpDown();
-      numericUpDown2 = new NumericUpDown();
-      ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+      a = new NumericUpDown();
+      b = new NumericUpDown();
+      result_label_linear = new Label();
+      ((System.ComponentModel.ISupportInitialize)a).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)b).BeginInit();
       SuspendLayout();
       // 
       // label1
@@ -55,32 +56,46 @@
       label2.TabIndex = 1;
       label2.Text = "b";
       // 
-      // numericUpDown1
+      // a
       // 
-      numericUpDown1.Location = new Point(104, 48);
-      numericUpDown1.Name = "numericUpDown1";
-      numericUpDown1.Size = new Size(120, 23);
-      numericUpDown1.TabIndex = 5;
+      a.Location = new Point(104, 48);
+      a.Name = "a";
+      a.Size = new Size(120, 23);
+      a.TabIndex = 5;
+      a.Value = new decimal(new int[] { 44, 0, 0, 0 });
+      a.ValueChanged += a_ValueChanged;
       // 
-      // numericUpDown2
+      // b
       // 
-      numericUpDown2.Location = new Point(104, 88);
-      numericUpDown2.Name = "numericUpDown2";
-      numericUpDown2.Size = new Size(120, 23);
-      numericUpDown2.TabIndex = 6;
+      b.Location = new Point(104, 88);
+      b.Name = "b";
+      b.Size = new Size(120, 23);
+      b.TabIndex = 6;
+      b.Value = new decimal(new int[] { 3, 0, 0, 0 });
+      // 
+      // result_label_linear
+      // 
+      result_label_linear.AutoSize = true;
+      result_label_linear.Location = new Point(120, 131);
+      result_label_linear.Name = "result_label_linear";
+      result_label_linear.Size = new Size(38, 15);
+      result_label_linear.TabIndex = 7;
+      result_label_linear.Text = "label3";
+      result_label_linear.Click += label3_Click;
       // 
       // LinearFunction
       // 
       AutoScaleDimensions = new SizeF(7F, 15F);
       AutoScaleMode = AutoScaleMode.Font;
-      Controls.Add(numericUpDown2);
-      Controls.Add(numericUpDown1);
+      Controls.Add(result_label_linear);
+      Controls.Add(b);
+      Controls.Add(a);
       Controls.Add(label2);
       Controls.Add(label1);
       Name = "LinearFunction";
       Size = new Size(433, 299);
-      ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-      ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+      ((System.ComponentModel.ISupportInitialize)a).EndInit();
+      ((System.ComponentModel.ISupportInitialize)b).EndInit();
       ResumeLayout(false);
       PerformLayout();
     }
@@ -89,7 +104,8 @@
 
     private Label label1;
     private Label label2;
-    private NumericUpDown numericUpDown1;
-    private NumericUpDown numericUpDown2;
+    private NumericUpDown a;
+    private NumericUpDown b;
+    private Label result_label_linear;
   }
 }

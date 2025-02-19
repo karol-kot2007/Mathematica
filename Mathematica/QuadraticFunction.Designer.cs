@@ -31,12 +31,13 @@
       label1 = new Label();
       label2 = new Label();
       label3 = new Label();
-      numericUpDown1 = new NumericUpDown();
-      numericUpDown2 = new NumericUpDown();
-      numericUpDown3 = new NumericUpDown();
-      ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
+      a = new NumericUpDown();
+      b = new NumericUpDown();
+      c = new NumericUpDown();
+      result_label_quadratic = new Label();
+      ((System.ComponentModel.ISupportInitialize)a).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)b).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)c).BeginInit();
       SuspendLayout();
       // 
       // label1
@@ -68,40 +69,59 @@
       // 
       // numericUpDown1
       // 
-      numericUpDown1.Location = new Point(105, 60);
-      numericUpDown1.Name = "numericUpDown1";
-      numericUpDown1.Size = new Size(120, 23);
-      numericUpDown1.TabIndex = 3;
+      a.AccessibleName = "nr_1";
+      a.Location = new Point(105, 68);
+      a.Name = "numericUpDown1";
+      a.Size = new Size(120, 23);
+      a.TabIndex = 3;
+      a.Value = new decimal(new int[] { 1, 0, 0, 0 });
+      a.ValueChanged += numericUpDown1_ValueChanged;
       // 
       // numericUpDown2
       // 
-      numericUpDown2.Location = new Point(105, 106);
-      numericUpDown2.Name = "numericUpDown2";
-      numericUpDown2.Size = new Size(120, 23);
-      numericUpDown2.TabIndex = 4;
+      b.AccessibleDescription = "nr_2";
+      b.Location = new Point(105, 108);
+      b.Name = "numericUpDown2";
+      b.Size = new Size(120, 23);
+      b.TabIndex = 4;
       // 
       // numericUpDown3
       // 
-      numericUpDown3.Location = new Point(105, 148);
-      numericUpDown3.Name = "numericUpDown3";
-      numericUpDown3.Size = new Size(120, 23);
-      numericUpDown3.TabIndex = 5;
+      c.AccessibleDescription = "nr_3";
+      c.Location = new Point(105, 154);
+      c.Name = "numericUpDown3";
+      c.Size = new Size(120, 23);
+      c.TabIndex = 5;
+      c.Value = new decimal(new int[] { 3, 0, 0, 0 });
+      c.ValueChanged += numericUpDown3_ValueChanged;
+      // 
+      // result_label_quadratic
+      // 
+      result_label_quadratic.AutoSize = true;
+      result_label_quadratic.Location = new Point(105, 213);
+      result_label_quadratic.Name = "result_label_quadratic";
+      result_label_quadratic.Size = new Size(36, 15);
+      result_label_quadratic.TabIndex = 6;
+      result_label_quadratic.Text = "dfdfd";
+      result_label_quadratic.Click += label4_Click;
       // 
       // QuadraticFunction
       // 
       AutoScaleDimensions = new SizeF(7F, 15F);
       AutoScaleMode = AutoScaleMode.Font;
-      Controls.Add(numericUpDown3);
-      Controls.Add(numericUpDown2);
-      Controls.Add(numericUpDown1);
+      Controls.Add(result_label_quadratic);
+      Controls.Add(c);
+      Controls.Add(b);
+      Controls.Add(a);
       Controls.Add(label3);
       Controls.Add(label2);
       Controls.Add(label1);
       Name = "QuadraticFunction";
       Size = new Size(431, 425);
-      ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-      ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
-      ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
+      Load += QuadraticFunction_Load;
+      ((System.ComponentModel.ISupportInitialize)a).EndInit();
+      ((System.ComponentModel.ISupportInitialize)b).EndInit();
+      ((System.ComponentModel.ISupportInitialize)c).EndInit();
       ResumeLayout(false);
       PerformLayout();
     }
@@ -111,8 +131,9 @@
     private Label label1;
     private Label label2;
     private Label label3;
-    private NumericUpDown numericUpDown1;
-    private NumericUpDown numericUpDown2;
-    private NumericUpDown numericUpDown3;
+    private NumericUpDown a;
+    private NumericUpDown b;
+    private NumericUpDown c;
+    private Label result_label_quadratic;
   }
 }

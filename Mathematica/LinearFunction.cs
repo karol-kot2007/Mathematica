@@ -15,6 +15,8 @@ namespace Mathematica
     public LinearFunction()
     {
       InitializeComponent();
+
+      result_label_linear.Text = "y" + "=" + a.Value + "*x" + " + " + b.Value;
     }
 
     private void label1_Click(object sender, EventArgs e)
@@ -23,6 +25,16 @@ namespace Mathematica
     }
 
     private void textBox2_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    private void label3_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private void a_ValueChanged(object sender, EventArgs e)
     {
 
     }

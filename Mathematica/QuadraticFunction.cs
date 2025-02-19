@@ -15,6 +15,28 @@ namespace Mathematica
     public QuadraticFunction()
     {
       InitializeComponent();
+
+      result_label_quadratic.Text ="y"+ "="+ a.Value + "x" + "^2" + " " + "+" + b.Value +"x"+ " " + "+" + c.Value;
+    }
+
+    private void QuadraticFunction_Load(object sender, EventArgs e)
+    {
+
+    }
+
+    private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    private void label4_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+    {
+
     }
   }
 }
