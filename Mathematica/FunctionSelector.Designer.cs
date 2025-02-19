@@ -36,13 +36,14 @@
       // 
       // comboBox1
       // 
+      comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+      comboBox1.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
       comboBox1.FormattingEnabled = true;
       comboBox1.Items.AddRange(new object[] { "Linear function", "Quadratic function" });
       comboBox1.Location = new Point(43, 49);
       comboBox1.Name = "comboBox1";
-      comboBox1.Size = new Size(150, 23);
+      comboBox1.Size = new Size(150, 21);
       comboBox1.TabIndex = 0;
-      comboBox1.Text = "Select function type";
       comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
       // 
       // button1

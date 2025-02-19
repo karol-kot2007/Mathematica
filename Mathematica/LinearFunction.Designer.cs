@@ -30,8 +30,10 @@
     {
       label1 = new Label();
       label2 = new Label();
-      textBox1 = new TextBox();
-      textBox2 = new TextBox();
+      numericUpDown1 = new NumericUpDown();
+      numericUpDown2 = new NumericUpDown();
+      ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
       SuspendLayout();
       // 
       // label1
@@ -53,32 +55,32 @@
       label2.TabIndex = 1;
       label2.Text = "b";
       // 
-      // textBox1
+      // numericUpDown1
       // 
-      textBox1.Location = new Point(101, 53);
-      textBox1.Name = "textBox1";
-      textBox1.Size = new Size(100, 23);
-      textBox1.TabIndex = 3;
-      textBox1.TextAlign = HorizontalAlignment.Center;
+      numericUpDown1.Location = new Point(104, 48);
+      numericUpDown1.Name = "numericUpDown1";
+      numericUpDown1.Size = new Size(120, 23);
+      numericUpDown1.TabIndex = 5;
       // 
-      // textBox2
+      // numericUpDown2
       // 
-      textBox2.Location = new Point(101, 85);
-      textBox2.Name = "textBox2";
-      textBox2.Size = new Size(100, 23);
-      textBox2.TabIndex = 4;
-      textBox2.TextAlign = HorizontalAlignment.Center;
+      numericUpDown2.Location = new Point(104, 88);
+      numericUpDown2.Name = "numericUpDown2";
+      numericUpDown2.Size = new Size(120, 23);
+      numericUpDown2.TabIndex = 6;
       // 
       // LinearFunction
       // 
       AutoScaleDimensions = new SizeF(7F, 15F);
       AutoScaleMode = AutoScaleMode.Font;
-      Controls.Add(textBox2);
-      Controls.Add(textBox1);
+      Controls.Add(numericUpDown2);
+      Controls.Add(numericUpDown1);
       Controls.Add(label2);
       Controls.Add(label1);
       Name = "LinearFunction";
       Size = new Size(433, 299);
+      ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+      ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
       ResumeLayout(false);
       PerformLayout();
     }
@@ -87,7 +89,7 @@
 
     private Label label1;
     private Label label2;
-    private TextBox textBox1;
-    private TextBox textBox2;
+    private NumericUpDown numericUpDown1;
+    private NumericUpDown numericUpDown2;
   }
 }

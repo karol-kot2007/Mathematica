@@ -31,9 +31,12 @@
       label1 = new Label();
       label2 = new Label();
       label3 = new Label();
-      textBox1 = new TextBox();
-      textBox2 = new TextBox();
-      textBox3 = new TextBox();
+      numericUpDown1 = new NumericUpDown();
+      numericUpDown2 = new NumericUpDown();
+      numericUpDown3 = new NumericUpDown();
+      ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
       SuspendLayout();
       // 
       // label1
@@ -63,39 +66,42 @@
       label3.TabIndex = 2;
       label3.Text = "c";
       // 
-      // textBox1
+      // numericUpDown1
       // 
-      textBox1.Location = new Point(115, 60);
-      textBox1.Name = "textBox1";
-      textBox1.Size = new Size(100, 23);
-      textBox1.TabIndex = 3;
+      numericUpDown1.Location = new Point(105, 60);
+      numericUpDown1.Name = "numericUpDown1";
+      numericUpDown1.Size = new Size(120, 23);
+      numericUpDown1.TabIndex = 3;
       // 
-      // textBox2
+      // numericUpDown2
       // 
-      textBox2.Location = new Point(115, 108);
-      textBox2.Name = "textBox2";
-      textBox2.Size = new Size(100, 23);
-      textBox2.TabIndex = 4;
+      numericUpDown2.Location = new Point(105, 106);
+      numericUpDown2.Name = "numericUpDown2";
+      numericUpDown2.Size = new Size(120, 23);
+      numericUpDown2.TabIndex = 4;
       // 
-      // textBox3
+      // numericUpDown3
       // 
-      textBox3.Location = new Point(115, 156);
-      textBox3.Name = "textBox3";
-      textBox3.Size = new Size(100, 23);
-      textBox3.TabIndex = 5;
+      numericUpDown3.Location = new Point(105, 148);
+      numericUpDown3.Name = "numericUpDown3";
+      numericUpDown3.Size = new Size(120, 23);
+      numericUpDown3.TabIndex = 5;
       // 
       // QuadraticFunction
       // 
       AutoScaleDimensions = new SizeF(7F, 15F);
       AutoScaleMode = AutoScaleMode.Font;
-      Controls.Add(textBox3);
-      Controls.Add(textBox2);
-      Controls.Add(textBox1);
+      Controls.Add(numericUpDown3);
+      Controls.Add(numericUpDown2);
+      Controls.Add(numericUpDown1);
       Controls.Add(label3);
       Controls.Add(label2);
       Controls.Add(label1);
       Name = "QuadraticFunction";
       Size = new Size(431, 425);
+      ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+      ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+      ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
       ResumeLayout(false);
       PerformLayout();
     }
@@ -105,8 +111,8 @@
     private Label label1;
     private Label label2;
     private Label label3;
-    private TextBox textBox1;
-    private TextBox textBox2;
-    private TextBox textBox3;
+    private NumericUpDown numericUpDown1;
+    private NumericUpDown numericUpDown2;
+    private NumericUpDown numericUpDown3;
   }
 }
