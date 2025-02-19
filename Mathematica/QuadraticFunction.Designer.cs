@@ -31,13 +31,13 @@
       label1 = new Label();
       label2 = new Label();
       label3 = new Label();
-      a = new NumericUpDown();
-      b = new NumericUpDown();
-      c = new NumericUpDown();
+      a_quadratic = new NumericUpDown();
+      b_quadratic = new NumericUpDown();
+      c_quadratic = new NumericUpDown();
       result_label_quadratic = new Label();
-      ((System.ComponentModel.ISupportInitialize)a).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)b).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)c).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)a_quadratic).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)b_quadratic).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)c_quadratic).BeginInit();
       SuspendLayout();
       // 
       // label1
@@ -67,42 +67,40 @@
       label3.TabIndex = 2;
       label3.Text = "c";
       // 
-      // numericUpDown1
+      // a_quadratic
       // 
-      a.AccessibleName = "nr_1";
-      a.Location = new Point(105, 68);
-      a.Name = "numericUpDown1";
-      a.Size = new Size(120, 23);
-      a.TabIndex = 3;
-      a.Value = new decimal(new int[] { 1, 0, 0, 0 });
-      a.ValueChanged += numericUpDown1_ValueChanged;
+      a_quadratic.AccessibleName = "nr_1";
+      a_quadratic.Location = new Point(105, 68);
+      a_quadratic.Name = "a_quadratic";
+      a_quadratic.Size = new Size(120, 23);
+      a_quadratic.TabIndex = 3;
+      a_quadratic.ValueChanged += a_ValueChanged;
       // 
-      // numericUpDown2
+      // b_quadratic
       // 
-      b.AccessibleDescription = "nr_2";
-      b.Location = new Point(105, 108);
-      b.Name = "numericUpDown2";
-      b.Size = new Size(120, 23);
-      b.TabIndex = 4;
+      b_quadratic.AccessibleDescription = "nr_2";
+      b_quadratic.Location = new Point(105, 108);
+      b_quadratic.Name = "b_quadratic";
+      b_quadratic.Size = new Size(120, 23);
+      b_quadratic.TabIndex = 4;
+      b_quadratic.ValueChanged += b_ValueChanged;
       // 
-      // numericUpDown3
+      // c_quadratic
       // 
-      c.AccessibleDescription = "nr_3";
-      c.Location = new Point(105, 154);
-      c.Name = "numericUpDown3";
-      c.Size = new Size(120, 23);
-      c.TabIndex = 5;
-      c.Value = new decimal(new int[] { 3, 0, 0, 0 });
-      c.ValueChanged += numericUpDown3_ValueChanged;
+      c_quadratic.AccessibleDescription = "nr_3";
+      c_quadratic.Location = new Point(105, 154);
+      c_quadratic.Name = "c_quadratic";
+      c_quadratic.Size = new Size(120, 23);
+      c_quadratic.TabIndex = 5;
+      c_quadratic.ValueChanged += c_ValueChanged;
       // 
       // result_label_quadratic
       // 
       result_label_quadratic.AutoSize = true;
       result_label_quadratic.Location = new Point(105, 213);
       result_label_quadratic.Name = "result_label_quadratic";
-      result_label_quadratic.Size = new Size(36, 15);
+      result_label_quadratic.Size = new Size(0, 15);
       result_label_quadratic.TabIndex = 6;
-      result_label_quadratic.Text = "dfdfd";
       result_label_quadratic.Click += label4_Click;
       // 
       // QuadraticFunction
@@ -110,18 +108,18 @@
       AutoScaleDimensions = new SizeF(7F, 15F);
       AutoScaleMode = AutoScaleMode.Font;
       Controls.Add(result_label_quadratic);
-      Controls.Add(c);
-      Controls.Add(b);
-      Controls.Add(a);
+      Controls.Add(c_quadratic);
+      Controls.Add(b_quadratic);
+      Controls.Add(a_quadratic);
       Controls.Add(label3);
       Controls.Add(label2);
       Controls.Add(label1);
       Name = "QuadraticFunction";
       Size = new Size(431, 425);
       Load += QuadraticFunction_Load;
-      ((System.ComponentModel.ISupportInitialize)a).EndInit();
-      ((System.ComponentModel.ISupportInitialize)b).EndInit();
-      ((System.ComponentModel.ISupportInitialize)c).EndInit();
+      ((System.ComponentModel.ISupportInitialize)a_quadratic).EndInit();
+      ((System.ComponentModel.ISupportInitialize)b_quadratic).EndInit();
+      ((System.ComponentModel.ISupportInitialize)c_quadratic).EndInit();
       ResumeLayout(false);
       PerformLayout();
     }
@@ -131,9 +129,9 @@
     private Label label1;
     private Label label2;
     private Label label3;
-    private NumericUpDown a;
-    private NumericUpDown b;
-    private NumericUpDown c;
+    private NumericUpDown a_quadratic;
+    private NumericUpDown b_quadratic;
+    private NumericUpDown c_quadratic;
     private Label result_label_quadratic;
   }
 }
