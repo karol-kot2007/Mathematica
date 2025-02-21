@@ -10,8 +10,8 @@ namespace ModelTests
     [TestMethod]
     public void Calculate_TestMethod1()
     {
-      int minX = 0; int maxX = 1;
-      int minY = 0; 
+    
+    
       int a = 2;
       int b = 1;
       var model = new LinearFunctionModel(a, b);
