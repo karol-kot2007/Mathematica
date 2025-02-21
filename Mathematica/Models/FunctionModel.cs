@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Mathematica.Models
+﻿namespace Mathematica.Models
 {
   public class FunctionModel
   {
-    enum FunctionKind { Unset, Linear, Quadratic }
+    public enum FunctionKind { Unset, Linear, Quadratic }
     int MinX = 100;
     int MaxX = 100;
-    Dictionary<int, int> Values;// key of dict is x, value is y
-
+    Dictionary<int, int> Values_dic;// key of dict is x, value is y
+    public List<int> Values { get; set; }
+    public FunctionKind Kind { get; set; }
   }
 }

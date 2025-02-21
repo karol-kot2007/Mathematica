@@ -2,18 +2,19 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 
-namespace TestProject
+namespace ModelTests
 {
   [TestClass]
-  public sealed class Test1
+  public sealed class LinearFunctionTest
   {
     [TestMethod]
     public void Calculate_TestMethod1()
     {
       int minX = 0; int maxX = 1;
+      int minY = 0; 
       int a = 2;
       int b = 1;
-      var model = new LinearFunctionModel(a, b, minX, maxX);
+      var model = new LinearFunctionModel(a, b);
       
       
       model.Calculate(0, 1);

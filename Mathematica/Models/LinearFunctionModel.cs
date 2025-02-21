@@ -8,13 +8,12 @@ namespace Mathematica.Models
 {
   public class LinearFunctionModel : FunctionModel
   {
-     int a;
-     int b;
-    int [] tab;
-    public List<int> Values { get;  set; } 
-
-    public LinearFunctionModel(int a, int b, int minX, int maxX)
+    public FunctionKind Kind { get; set; }
+    int a;
+    int b;
+    public LinearFunctionModel(int a, int b, int minX = 0, int maxX = 1)
     {
+      Kind = FunctionKind.Linear;
       this.a = a;
       this.b = b;
       this.Values = new List<int>();
@@ -27,8 +26,8 @@ namespace Mathematica.Models
 
     public void Calculate(int minX, int maxX)
     {
-     
-      
+
+
     }
   }
 }

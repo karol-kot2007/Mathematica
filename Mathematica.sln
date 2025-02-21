@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mathematica", "Mathematica\Mathematica.csproj", "{1A0CF222-A4C7-4453-923D-0F985D93A113}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject2", "TestProject2\TestProject2.csproj", "{30DCBB1D-217F-491E-8290-4D36E619F976}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelTests", "TestProject2\ModelTests.csproj", "{30DCBB1D-217F-491E-8290-4D36E619F976}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
