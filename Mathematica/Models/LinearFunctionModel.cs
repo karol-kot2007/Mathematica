@@ -41,7 +41,7 @@ namespace Mathematica.Models
 
 
     }
-    public override int GetY(int x)
+    public  override int GetY(int x)
     {
       return a*x +b;  
     }
