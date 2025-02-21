@@ -8,19 +8,6 @@ namespace ModelTests
   public sealed class LinearFunctionTest
   {
     [TestMethod]
-    public void Calculate_TestMethod1()
-    {
-    
-    
-      int a = 2;
-      int b = 1;
-      var model = new LinearFunctionModel(a, b);
-      model.Calculate(0, 1);
-
-      List<int> expectedValues = new List<int> { 1, 3 }; 
- //     CollectionAssert.AreEqual(expectedValues, model.Values); 
-    }
-    [TestMethod]
     public void TestGetY() 
     {
       int a = 2; 
