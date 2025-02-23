@@ -136,6 +136,7 @@
       Point1XTxt.TabIndex = 9;
       Point1XTxt.Text = "23";
       Point1XTxt.TextAlign = HorizontalAlignment.Center;
+      Point1XTxt.TextChanged += Point1XTxt_TextChanged;
       // 
       // Radius
       // 
@@ -190,6 +191,7 @@
       Point3XTxt.TabIndex = 24;
       Point3XTxt.Text = "2";
       Point3XTxt.TextAlign = HorizontalAlignment.Center;
+      Point3XTxt.TextChanged += Point3XTxt_TextChanged;
       // 
       // Point3YTxt
       // 

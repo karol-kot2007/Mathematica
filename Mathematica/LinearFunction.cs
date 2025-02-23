@@ -18,7 +18,7 @@ namespace Mathematica
 
       result_label_linear.Text = "y" + "=" + a_linear.Value + "*x" + " + " + b_linear.Value;
     }
-
+ 
     private void label1_Click(object sender, EventArgs e)
     {
 
@@ -38,10 +38,12 @@ namespace Mathematica
     {
       result_label_linear.Text = "y" + "=" + string.Format(a_linear.Value.ToString()) + "*x" + " + " + b_linear.Value;
     }
-
+    
+  
     private void b_linear_ValueChanged(object sender, EventArgs e)
     {
       result_label_linear.Text = "y" + "=" + a_linear.Value + "*x" + " + " + string.Format(b_linear.Value.ToString());
     }
+    
   }
 }

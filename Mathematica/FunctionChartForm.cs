@@ -16,7 +16,7 @@ namespace Mathematica
 
     private void functionSelector1_Load(object sender, EventArgs e)
     {
-
+      
     }
   }
 }

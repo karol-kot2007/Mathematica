@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mathematica.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,8 @@ namespace Mathematica
   public partial class FunctionSelector : UserControl
   {
     public event EventHandler ShapeComboChanged;
+    LinearFunction linearFunction;
+
     public string FunType
     {
       get;
@@ -23,6 +26,7 @@ namespace Mathematica
       InitializeComponent();
       linearFunction1.Visible = false;
       quadraticFunction1.Visible = false;
+      
     }
 
     private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -53,12 +57,12 @@ namespace Mathematica
     private void button1_Click(object sender, EventArgs e)
     {
       
-    
+      LinearFunctionModel model = new LinearFunctionModel(a,b, 0, 100);
     }
 
     private void quadraticFunction1_Load(object sender, EventArgs e)
     {
-
+    
     }
   }
 }

@@ -13,6 +13,7 @@ namespace Mathematica.Models
     int b;
     public LinearFunctionModel(int a, int b, int minX = 0, int maxX = 100)
     {
+      
       Kind = FunctionKind.Linear;
       this.a = a;
       this.b = b;

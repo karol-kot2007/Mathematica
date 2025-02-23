@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mathematica.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,17 +17,28 @@ namespace Mathematica
     public Point ChartLineYBottom { get; set; }
     public Point ChartLineXLeft { get; set; }
     public Point ChartLineXRight { get; set; }
+    public FunctionModel Model { get; private set; }
     internal Line AxisY { get; set; }
     internal Line AxisX { get; set; }
     internal Arrow ArrowY { get; set; }
     internal Arrow ArrowX { get; set; }
     List<Line> chartAxisLines;
+    List<Point> Points;
 
-
-
+    public void SetModel(FunctionModel model)
+    {
+      Model = model;
+      Points.Clear();
+      foreach (var point in model.Points)
+      {
+        Points.Add(point);
+      }
+      Refresh();
+    }
     public FunctionChart()
     {
       InitializeComponent();
+      Refresh();
     }
 
     public void createChartAxisX()
@@ -76,7 +88,7 @@ namespace Mathematica
       ArrowY.Line1 = new Line(pt, ChartLineYTop);
       pt.X = pt.X + 12;
       ArrowY.Line2 = new Line(ChartLineYTop, pt);
-     
+
       pt2.X = pt2.X - 7;
       pt2.Y = pt2.Y - 7;
       ArrowX.Line1 = new Line(pt2, ChartLineXRight);
