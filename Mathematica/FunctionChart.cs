@@ -13,6 +13,7 @@ namespace Mathematica
 {
   public partial class FunctionChart : UserControl
   {
+
     public Point ChartLineYTop { get; set; }
     public Point ChartLineYBottom { get; set; }
     public Point ChartLineXLeft { get; set; }
@@ -24,7 +25,7 @@ namespace Mathematica
     internal Arrow ArrowX { get; set; }
     List<Line> chartAxisLines;
     List<Point> Points;
-
+    public FunctionModel functionModel { get; set; }
     public void SetModel(FunctionModel model)
     {
       Model = model;
@@ -39,6 +40,8 @@ namespace Mathematica
     {
       InitializeComponent();
       Refresh();
+      this.Paint += FunctionChart_Paint;
+
     }
 
     public void createChartAxisX()

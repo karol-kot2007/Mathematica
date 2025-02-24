@@ -74,6 +74,7 @@
       a_quadratic.Name = "a_quadratic";
       a_quadratic.Size = new Size(120, 23);
       a_quadratic.TabIndex = 3;
+      a_quadratic.Value = new decimal(new int[] { 1, 0, 0, 0 });
       a_quadratic.ValueChanged += a_ValueChanged;
       // 
       // b_quadratic

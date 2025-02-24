@@ -2,6 +2,7 @@
 {
   public abstract class FunctionModel
   {
+
     public enum FunctionKind { Unset, Linear, Quadratic }
     public int MinX = 0;
     public int MaxX = 100;

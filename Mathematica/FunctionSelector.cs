@@ -5,12 +5,14 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Mathematica
 {
+
   public partial class FunctionSelector : UserControl
   {
     public event EventHandler ShapeComboChanged;
@@ -26,7 +28,8 @@ namespace Mathematica
       InitializeComponent();
       linearFunction1.Visible = false;
       quadraticFunction1.Visible = false;
-      
+      linearFunction = new LinearFunction();
+
     }
 
     private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -56,13 +59,18 @@ namespace Mathematica
 
     private void button1_Click(object sender, EventArgs e)
     {
-      
-      LinearFunctionModel model = new LinearFunctionModel(a,b, 0, 100);
+      linearFunction.UpdatePoints();
+      LinearFunctionModel model = new LinearFunctionModel(linearFunction.point_a, linearFunction.point_b, 0, 100);
+      if (linearFunction.point_a > 10)
+      {
+        Application.Exit();
+      }
+
     }
 
     private void quadraticFunction1_Load(object sender, EventArgs e)
     {
-    
+
     }
   }
 }
