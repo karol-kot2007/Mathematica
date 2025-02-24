@@ -16,7 +16,7 @@ namespace Mathematica
   public partial class FunctionSelector : UserControl
   {
     public event EventHandler ShapeComboChanged;
-    LinearFunction linearFunction;
+    //LinearFunction linearFunction;
 
     public string FunType
     {
@@ -26,9 +26,9 @@ namespace Mathematica
     public FunctionSelector()
     {
       InitializeComponent();
-      linearFunction1.Visible = false;
-      quadraticFunction1.Visible = false;
-      linearFunction = new LinearFunction();
+      linearFunction.Visible = false;
+      quadraticFunction.Visible = false;
+      
 
     }
 
@@ -37,13 +37,13 @@ namespace Mathematica
       FunType = comboBox1.Text;
       if (this.FunType == "Linear function")
       {
-        linearFunction1.Visible = true;
-        quadraticFunction1.Visible = false;
+        linearFunction.Visible = true;
+        quadraticFunction.Visible = false;
       }
       else if (this.FunType == "Quadratic function")
       {
-        linearFunction1.Visible = false;
-        quadraticFunction1.Visible = true;
+        linearFunction.Visible = false;
+        quadraticFunction.Visible = true;
       }
     }
 
@@ -57,14 +57,11 @@ namespace Mathematica
 
     }
 
-    private void button1_Click(object sender, EventArgs e)
+    private void ApplyButton_Click(object sender, EventArgs e)
     {
       linearFunction.UpdatePoints();
       LinearFunctionModel model = new LinearFunctionModel(linearFunction.point_a, linearFunction.point_b, 0, 100);
-      if (linearFunction.point_a > 10)
-      {
-        Application.Exit();
-      }
+    
 
     }
 
