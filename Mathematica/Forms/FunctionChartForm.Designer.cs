@@ -39,10 +39,13 @@
       functionChart1.ChartLineXRight = new Point(500, 400);
       functionChart1.ChartLineYBottom = new Point(10, 400);
       functionChart1.ChartLineYTop = new Point(10, 10);
+      functionChart1.FunctionModel = null;
+      functionChart1.linearFunction = null;
       functionChart1.Location = new Point(1, 1);
       functionChart1.Name = "functionChart1";
       functionChart1.Size = new Size(982, 674);
       functionChart1.TabIndex = 0;
+      functionChart1.Load += functionChart1_Load;
       // 
       // functionSelector1
       // 

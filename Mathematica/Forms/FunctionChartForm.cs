@@ -11,12 +11,22 @@ namespace Mathematica
     public FunctionChartForm()
     {
       InitializeComponent();
+      functionSelector1.ApplyModel += FunctionSelector1_ApplyModel; ;
+    }
 
+    private void FunctionSelector1_ApplyModel(object? sender, Models.FunctionModel e)
+    {
+      functionChart1.SetModel(e);
     }
 
     private void functionSelector1_Load(object sender, EventArgs e)
     {
-      
+
+    }
+
+    private void functionChart1_Load(object sender, EventArgs e)
+    {
+
     }
   }
 }

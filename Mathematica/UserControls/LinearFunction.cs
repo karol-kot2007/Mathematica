@@ -20,8 +20,6 @@ namespace Mathematica
     {
       InitializeComponent();
       result_label_linear.Text = "y" + "=" + a_linear.Value + "*x" + " + " + b_linear.Value;
-
-
     }
 
     private void label1_Click(object sender, EventArgs e)
@@ -43,10 +41,6 @@ namespace Mathematica
     {
       result_label_linear.Text = "y" + "=" + string.Format(a_linear.Value.ToString()) + "*x" + " + " + b_linear.Value;
       point_a = (int)a_linear.Value;
-      //if (point_a > 10)
-      //{
-      //  Application.Exit();
-      //}
     }
 
 
@@ -54,10 +48,6 @@ namespace Mathematica
     {
       result_label_linear.Text = "y" + "=" + a_linear.Value + "*x" + " + " + string.Format(b_linear.Value.ToString());
       point_b = (int)b_linear.Value;
-      //if (point_b > 10)
-      //{
-      //  Application.Exit();
-      //}
     }
     public void UpdatePoints()
     {

@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,26 +14,30 @@ namespace Mathematica
 {
   public partial class FunctionChart : UserControl
   {
-
+    public Pen Pen = new Pen(Color.Red, 3);
     public Point ChartLineYTop { get; set; }
     public Point ChartLineYBottom { get; set; }
     public Point ChartLineXLeft { get; set; }
     public Point ChartLineXRight { get; set; }
     public FunctionModel Model { get; private set; }
+    public LinearFunction linearFunction { get; set; }
     internal Line AxisY { get; set; }
     internal Line AxisX { get; set; }
     internal Arrow ArrowY { get; set; }
     internal Arrow ArrowX { get; set; }
-    List<Line> chartAxisLines;
-    List<Point> Points;
-    public FunctionModel functionModel { get; set; }
+
+    List<Line>  chartAxisLines = new List<Line>();
+    List<Point> Points = new();
+    public FunctionModel FunctionModel { get; set; }
+    Pen pen = new Pen(Color.DarkRed);
+
     public void SetModel(FunctionModel model)
     {
       Model = model;
       Points.Clear();
-      foreach (var point in model.Points)
+      for (var x = 0; x < model.AxisYValues.Count; x++)
       {
-        Points.Add(point);
+        Points.Add(new Point(x, Height- model.AxisYValues[x]));
       }
       Refresh();
     }
@@ -40,71 +45,58 @@ namespace Mathematica
     {
       InitializeComponent();
       Refresh();
-      this.Paint += FunctionChart_Paint;
+      //   this.Paint += FunctionChart_Paint;
 
     }
-
-    public void createChartAxisX()
+    protected override void OnPaint(PaintEventArgs e)
     {
-      AxisX = new Line(ChartLineXLeft, ChartLineXRight);
-      ArrowX = new Arrow();
-      var pt = ChartLineXLeft;
+      var model = FunctionModel;
+      base.OnPaint(e);
+      for (var pointIndex = 0; pointIndex < Points.Count; pointIndex++)
+      {
+        if (pointIndex< Points.Count - 1)
+        {
+          Point point1 = Points[pointIndex];
+          Point point2 = Points[pointIndex + 1];
+          //add x offset of x axis
 
-      pt.Y = pt.Y - 6;
-      pt.X = pt.X + 10;
-      ArrowX.Line1 = new Line(pt, ChartLineXRight);
+          e.Graphics.DrawLine(pen, point1, point2);
 
-      pt.Y = pt.Y + 12;
-      ArrowY.Line2 = new Line(ChartLineXRight, pt);
-      //pt.X = pt.X - 6;
-      //pt.Y = pt.Y + 10;
-      //pt.X = pt.X + 12;
+        }
+      }
     }
-
-    public void createChartAxisY()
+    public void createArrows()
     {
-      AxisY = new Line(ChartLineYTop, ChartLineYBottom);
-      ArrowY = new Arrow();
-      var pt = ChartLineYTop;
-      pt.X = pt.X - 6;
-      pt.Y = pt.Y + 10;
-      ArrowY.Line1 = new Line(pt, ChartLineYTop);
-      pt.X = pt.X + 12;
-      ArrowY.Line2 = new Line(ChartLineYTop, pt);
-    }
-    private void createChartAxis(object sender, EventArgs e)
-    {
-      chartAxisLines = new List<Line>();
-      createChartAxisX();
-      createChartAxisY();
-    }
-    private void funchart_Load(object sender, EventArgs e)
-    {
-      AxisX = new Line(ChartLineXLeft, ChartLineXRight);
-      AxisY = new Line(ChartLineYTop, ChartLineYBottom);
-      ArrowY = new Arrow();
-      ArrowX = new Arrow();
-      var pt = ChartLineYTop;
       var pt2 = ChartLineXRight;
+      var pt = ChartLineYTop;
+      ArrowY = new Arrow();
+      ArrowX = new Arrow();
       pt.X = pt.X - 6;
       pt.Y = pt.Y + 10;
       ArrowY.Line1 = new Line(pt, ChartLineYTop);
       pt.X = pt.X + 12;
       ArrowY.Line2 = new Line(ChartLineYTop, pt);
-
       pt2.X = pt2.X - 7;
       pt2.Y = pt2.Y - 7;
       ArrowX.Line1 = new Line(pt2, ChartLineXRight);
       pt2.Y = pt2.Y + 14;
       ArrowX.Line2 = new Line(ChartLineXRight, pt2);
-
-      chartAxisLines = new List<Line>();
-      chartAxisLines.Add(AxisX);
-      chartAxisLines.Add(AxisY);
       chartAxisLines.Add(ArrowY.Line1);
       chartAxisLines.Add(ArrowY.Line2);
       chartAxisLines.Add(ArrowX.Line1);
       chartAxisLines.Add(ArrowX.Line2);
+    }
+    private void funchart_Load(object sender, EventArgs e)
+    {
+      var p = ChartLineYBottom;
+      p.X = 100;  
+      AxisX = new Line(ChartLineXLeft, ChartLineXRight);
+      AxisY = new Line(ChartLineYTop, ChartLineYBottom);
+     
+      chartAxisLines = new List<Line>();
+      chartAxisLines.Add(AxisX);
+      chartAxisLines.Add(AxisY);
+      createArrows();
     }
     private void panel2_Paint(object sender, PaintEventArgs e)
     {
