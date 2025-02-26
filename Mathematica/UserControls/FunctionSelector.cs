@@ -26,14 +26,13 @@ namespace Mathematica
     public FunctionSelector()
     {
       InitializeComponent();
-      linearFunction.Visible = false;
+      linearFunction.Visible = true;
       quadraticFunction.Visible = false;
     }
 
     private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
     {
       FunType = comboBox1.Text;
-      linearFunction.Visible = true;
       if (this.FunType == "Linear function")
       {
         linearFunction.Visible = true;
