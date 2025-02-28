@@ -85,13 +85,25 @@ namespace Mathematica
 
     private void createXaxis()
     {
-      AxisX = new Line(ChartLineXLeft, ChartLineXRight);
+      var a = ChartLineXLeft;
+      a.X = a.X-3;
+      a.Y = a.Y+3;
+      var b = ChartLineXRight;  
+      b.X = b.X-3;  
+      b.Y = b.Y+3;
+      AxisX = new Line(a, b);
       chartAxisLines.Add(AxisX);
     }
 
     private void createYaxis()
     {
-      AxisY = new Line(ChartLineYTop, ChartLineYBottom);
+      var b = ChartLineYTop;
+      b.Y -= 3; 
+      b.X -= 3;//prawo lewo
+      var c = ChartLineYBottom;
+      c.X -= 3;
+      c.Y += 3;
+      AxisY = new Line(b, c);
       chartAxisLines.Add(AxisY);
     }
     private void funchart_Load(object sender, EventArgs e)
