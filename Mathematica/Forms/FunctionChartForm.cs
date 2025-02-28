@@ -12,6 +12,7 @@ namespace Mathematica
     {
       InitializeComponent();
       functionSelector1.ApplyModel += FunctionSelector1_ApplyModel; ;
+       
     }
 
     private void FunctionSelector1_ApplyModel(object? sender, Models.FunctionModel e)

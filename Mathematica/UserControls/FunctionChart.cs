@@ -30,7 +30,7 @@ namespace Mathematica
     List<Point> Points = new();
     public FunctionModel FunctionModel { get; set; }
     Pen pen = new Pen(Color.DarkRed);
-
+  
     public void SetModel(FunctionModel model)
     {
       Model = model;
@@ -45,8 +45,6 @@ namespace Mathematica
     {
       InitializeComponent();
       Refresh();
-      //   this.Paint += FunctionChart_Paint;
-
     }
     protected override void OnPaint(PaintEventArgs e)
     {
@@ -59,9 +57,7 @@ namespace Mathematica
           Point point1 = Points[pointIndex];
           Point point2 = Points[pointIndex + 1];
           //add x offset of x axis
-
           e.Graphics.DrawLine(pen, point1, point2);
-
         }
       }
     }
@@ -86,16 +82,22 @@ namespace Mathematica
       chartAxisLines.Add(ArrowX.Line1);
       chartAxisLines.Add(ArrowX.Line2);
     }
+
+    private void createXaxis()
+    {
+      AxisX = new Line(ChartLineXLeft, ChartLineXRight);
+      chartAxisLines.Add(AxisX);
+    }
+
+    private void createYaxis()
+    {
+      AxisY = new Line(ChartLineYTop, ChartLineYBottom);
+      chartAxisLines.Add(AxisY);
+    }
     private void funchart_Load(object sender, EventArgs e)
     {
-      var p = ChartLineYBottom;
-      p.X = 100;  
-      AxisX = new Line(ChartLineXLeft, ChartLineXRight);
-      AxisY = new Line(ChartLineYTop, ChartLineYBottom);
-     
-      chartAxisLines = new List<Line>();
-      chartAxisLines.Add(AxisX);
-      chartAxisLines.Add(AxisY);
+      createXaxis();
+      createYaxis();
       createArrows();
     }
     private void panel2_Paint(object sender, PaintEventArgs e)
@@ -105,14 +107,11 @@ namespace Mathematica
 
     private void FunctionChart_Paint(object sender, PaintEventArgs e)
     {
-      foreach (var line in chartAxisLines)
+      foreach (var line  in chartAxisLines )
       {
-        e.Graphics.DrawLine(Pens.Gray, line.Start, line.End);
+      
+        e.Graphics.DrawLine(Pens.Gray, line.Start , line.End);
       }
-      //e.Graphics.DrawLine(Pens.Gray, AxisY.Start, AxisY.End);
-      //e.Graphics.DrawLine(Pens.Gray, AxisX.Start, AxisX.End);
-      //e.Graphics.DrawLine(Pens.Gray, ArrowY.Line1.Start, ArrowY.Line1.End);
-      //e.Graphics.DrawLine(Pens.Gray, ArrowY.Line2.Start, ArrowY.Line2.End);
     }
   }
 }

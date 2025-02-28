@@ -34,16 +34,15 @@
       // 
       // functionChart1
       // 
-      functionChart1.BorderStyle = BorderStyle.FixedSingle;
-      functionChart1.ChartLineXLeft = new Point(10, 400);
+      functionChart1.ChartLineXLeft = new Point(5, 400);
       functionChart1.ChartLineXRight = new Point(500, 400);
-      functionChart1.ChartLineYBottom = new Point(10, 400);
-      functionChart1.ChartLineYTop = new Point(10, 10);
+      functionChart1.ChartLineYBottom = new Point(5, 400);
+      functionChart1.ChartLineYTop = new Point(5, 10);
       functionChart1.FunctionModel = null;
       functionChart1.linearFunction = null;
-      functionChart1.Location = new Point(1, 1);
+      functionChart1.Location = new Point(43, 28);
       functionChart1.Name = "functionChart1";
-      functionChart1.Size = new Size(982, 674);
+      functionChart1.Size = new Size(720, 412);
       functionChart1.TabIndex = 0;
       functionChart1.Load += functionChart1_Load;
       // 
